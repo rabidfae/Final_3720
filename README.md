@@ -1,3 +1,1 @@
-to run tailwind: npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
-
-go to ./src/index.html
+I installed "concurrently" to start nodemon and tailwind with "npm start"

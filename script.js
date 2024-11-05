@@ -1,5 +1,3 @@
-
-
 const desireCard = document.getElementById('desireCard');
 const desireBtn = document.getElementById('desireBtn');
 const desireImage = document.getElementById('desireImage');
@@ -10,7 +8,7 @@ async function retrieveDesire() {
     const imageName = `${randomDesireCard}.png`;
 
     try {
-        const response = await fetch(`/images/${imageName}`);
+        const response = await fetch(`/api/images/${imageName}`);
         if (!response.ok) {
             throw new Error('Laura effed up');
         }

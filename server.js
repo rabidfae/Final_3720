@@ -199,6 +199,10 @@ const imageData = [
     },
 ];
 
+// Serve static files from the 'src' directory
+app.use(express.static(path.join(__dirname, 'src')));
+
+app.use(express.static(path.join(__dirname)));
 
 // Serve static files from the 'images' directory
 app.use('/images', express.static('images'));
@@ -209,7 +213,7 @@ app.get('/', (req, res) => {
 
 
 // Endpoint to get image data by name
-app.get('/images/:imageName', (req, res) => {
+app.get('/api/images/:imageName', (req, res) => {
     const imageName = req.params.imageName;
 
     // Find the image data by imageId

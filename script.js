@@ -75,6 +75,6 @@ async function retrieveRelation() {
     }
 }
 // Add an event listener to the button
-relationshipBtn.addEventListener("click", function() {
-    retrieveRelation();
+npcBtn.addEventListener("click", function() {
+    npcRelation();
 });

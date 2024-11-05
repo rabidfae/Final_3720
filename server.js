@@ -198,6 +198,87 @@ const imageData = [
         description: "Public Knowledge: The existence of the feud, and who it is between, is well known in the local town."
     },
 ];
+const imageData2 = [
+    {
+        imageId: '23.png',
+        cardId: 23,
+        public:"Best of Friends, the giver and the taker of this card are the most intimate companions, and longstanding friends.",
+        private:"Best of Friends, the giver and the taker of this card are the most intimate companions, and longstanding friends, and are well disposed to help with each other's plans and endeavours.",
+    },
+    {
+        imageId: '24.png',
+        cardId: 24,
+        public:"Former Friend: The giver and the taker of this card were former friends, until the givers cruel actions ended the friendship.",
+        private: "Former Friend: The giver of this card wronged the taker painfullt and completely."
+    },
+    {
+        imageId: '25.png',
+        cardId: 25,
+        public: "Friends: The giver and the taker of this card are longstanding acquaintances. They still visit on the rare occasion.",
+        private: "Friends: The giver and taker of this card are old flames. They had a romance once, and while the raging fire of their feelings has quietened, the spark never truly dies."
+    },
+    {
+        imageId: '26.png',
+        cardId: 26,
+        public: "Old Family Friend: The giver and the taker of this card are old family friends. Years ago, their families were quite well acquainted. But since the giver's youth they have rarely corresponded.",
+        private: "Parent and Child: The giver of this card is the illegitmate child of the taker. The taker rejected their child from birth to avoid scandal and disrepute to their family and name. The taker has not laid eyes on their child since infancy."
+
+    },
+    {
+        imageId: '27.png',
+        cardId: 27,
+        public: "Siblings: the taker of this card is the sibling of the giver. The giver will determine who is older and who is younger.",
+        private: "Siblings: The taker of this card is the sibling of the giver. The giver will determine who is older and who is younger."
+    },
+    {
+        imageId: '28.png',
+        cardId: 28,
+        public: "Rivals: The giver and the taker of this card are rivals.",
+        private: "Rivals: The giver and the taker of this card are rivals. For the taker, this may be a trivial rivalry, but for the giver, it is certainly a bitter one."
+    },
+    {
+        imageId: '29.png',
+        cardId: 29,
+        public: "Relation: Though not in the same immediate family, the giver and the taker of this card are relations. One is the cousin, aunt, uncle, niece, or nephew of the other. The Giver will determine their relationship.",
+        private: "Relation: Though not in the same immediate family, the giver and the taker of this card are relations. One is the cousin, aunt, uncle, niece, or nephew of the other. The Giver will determine their relationship."
+    },
+    {
+        imageId: '30.png',
+        cardId: 30,
+        public:"Object of Affection: The giver of this card is clearly in love with the taker.",
+        private: "Object of Affection: The giver of this card is clearly in love with the taker. Whether the taker chooses to reciprocate this affection is entirely up to them."
+    },
+    {
+        imageId: '31.png',
+        cardId: 31,
+        public: "Acquaintances: The giver and the taker of this card became friends during a season in London three years ago.",
+        private: "Secret Fiances: The giver and taker of this card have been secretly engaged for years, despite the disapproval of one of their families. While the giver wishes to go ahead, the taker has become relecutant. The taker is higher in social status or wealthier than the giver."
+    },
+    {
+        imageId: '32.png',
+        cardId: 32,
+        public:"Intended: The giver and take of this card are publicly engaged or bethrothed.",
+        private:"Intended: The giver and take of this card are publicly engaged or bethrothed."
+    },
+    {
+        imageId: '33.png',
+        cardId: 33,
+        public:"Parent and Child: The giver of this card is the parent or guardian of the taker.",
+        private:"Parent and Child: The giver of this card is the parent or guardian of the taker."
+    },
+    {
+        imageId: '34.png',
+        cardId: 34,
+        public:"Child and Parent:The giver of this card is the child or ward of the taker.",
+        private: "Child and Parent:The giver of this card is the child or ward of the taker."
+    },
+    {
+        imageId: '35.png',
+        cardId: 35,
+        public:"Patron and Client: The taker of this card is the patron of the giver.",
+        private: "Patron and Client: The taker of this card is the patron of the giver, for now. What the giver mst do to maintain such a relationship we will discover."
+    }
+]
 
 // Serve static files from the 'src' directory
 app.use(express.static(path.join(__dirname, 'src')));
@@ -212,12 +293,13 @@ app.get('/', (req, res) => {
 });
 
 
+
 // Endpoint to get image data by name
 app.get('/api/images/:imageName', (req, res) => {
     const imageName = req.params.imageName;
 
-    // Find the image data by imageId
-    const image = imageData.find(img => img.imageId === imageName);
+    // Find the image data by imageId in both arrays
+    const image = imageData.find(img => img.imageId === imageName) || imageData2.find(img => img.imageId === imageName);
 
     // Check if the image data exists
     if (image) {
@@ -231,6 +313,7 @@ app.get('/api/images/:imageName', (req, res) => {
     }
 });
 
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
@@ -238,6 +321,6 @@ app.listen(PORT, () => {
 
 
 
-console.log("Image ID:", imageData[7].imageId); 
-console.log("Desire:", imageData[7].desire); 
-console.log("Description:", imageData[7].description);
+// console.log("Image ID:", imageData[7].imageId); 
+// console.log("Desire:", imageData[7].desire); 
+// console.log("Description:", imageData[7].description);

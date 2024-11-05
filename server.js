@@ -83,11 +83,6 @@ const familyBackground = [
     }
 ]
 
-
-// Serves static files from the 'images' directory
-app.use('/images', express.static(path.join(__dirname, 'images')));
-
-//  simulate a database
 const imageData = [
      {
         imageId: '1.png',
@@ -204,22 +199,32 @@ const imageData = [
     },
 ];
 
+
+// Serve static files from the 'images' directory
+app.use('/images', express.static('images'));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'index.html'));
+});
+
+
 // Endpoint to get image data by name
-app.get('/api/images/:imageName', (req, res) => {
+app.get('/images/:imageName', (req, res) => {
     const imageName = req.params.imageName;
 
+    // Find the image data by imageId
+    const image = imageData.find(img => img.imageId === imageName);
+
     // Check if the image data exists
-    if (imageData[imageName]) {
-       
+    if (image) {
         // Serve the image metadata along with the image URL
         res.send({
             url: `http://localhost:${PORT}/images/${imageName}`,
-            ...imageData[imageName] // Spread the imageData properties
+            ...image
         });
     } else {
         res.status(404).send('Image has gone missing, please try again.');
     }
-   
 });
 
 // Start the server

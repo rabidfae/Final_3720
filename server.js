@@ -279,7 +279,9 @@ const imageData2 = [
         private: "Patron and Client: The taker of this card is the patron of the giver, for now. What the giver mst do to maintain such a relationship we will discover."
     }
 ]
+const imageData3 = [
 
+]
 // Serve static files from the 'src' directory
 app.use(express.static(path.join(__dirname, 'src')));
 
@@ -298,8 +300,8 @@ app.get('/', (req, res) => {
 app.get('/api/images/:imageName', (req, res) => {
     const imageName = req.params.imageName;
 
-    // Find the image data by imageId in both arrays
-    const image = imageData.find(img => img.imageId === imageName) || imageData2.find(img => img.imageId === imageName);
+    // Find the image data by imageId in all 3 arrays. 
+    const image = imageData.find(img => img.imageId === imageName) || imageData2.find(img => img.imageId === imageName) || imageData3.find(img => img.imageId === imageName);
 
     // Check if the image data exists
     if (image) {

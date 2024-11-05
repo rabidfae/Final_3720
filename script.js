@@ -56,4 +56,4 @@ relationshipBtn.addEventListener("click", function() {
     retrieveRelation();
 });
 
-console.log(retrieveRelation)
+// NPC card stuff here

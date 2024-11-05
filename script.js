@@ -57,3 +57,24 @@ relationshipBtn.addEventListener("click", function() {
 });
 
 // NPC card stuff here  
+async function retrieveRelation() {
+    // Generate a random number between 23 and 36
+    const randomRelationCard = Math.floor(Math.random() * 13) + 23; //13 is the number of cards in the relationship deck + 23 shifts it to start at 23
+    const imageName = `${randomRelationCard}.png`;
+
+    try {
+        const response = await fetch(`/api/images/${imageName}`);
+        if (!response.ok) {
+            throw new Error('Laura effed up on the relationship card');
+        }
+        const imageData2 = await response.json();
+        relationshipImage.src = imageData2.url;
+        relationshipImage.alt = imageData2.description;
+    } catch (error) {
+        console.error('Error fetching image:', error);
+    }
+}
+// Add an event listener to the button
+relationshipBtn.addEventListener("click", function() {
+    retrieveRelation();
+});

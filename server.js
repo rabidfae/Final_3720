@@ -277,9 +277,83 @@ const imageData2 = [
         cardId: 35,
         public:"Patron and Client: The taker of this card is the patron of the giver.",
         private: "Patron and Client: The taker of this card is the patron of the giver, for now. What the giver mst do to maintain such a relationship we will discover."
+    },
+    {
+        imageId: '36.png',
+        cardId: 36,
+        public:"Mentor: The taker of this card is the mentor of the giver. The giver is the taker's protege.",
+        private: "Mentor: The taker of this card is the mentor of the giver. The giver is the their protege."
+        
     }
 ]
 const imageData3 = [
+    {
+        imageId: '37.png',
+        cardId: 37,
+        sideA: "Evelyn: Succesful Physician. Homely, sincere, and professional. Holds the confidence and secrets of many of society's most influential.",
+        sideB: "Evelyn: Succesful Physician. Homely, polite, lacing in ambition. Only the fate of modern medicine can rouse him from his state of professional cordiality."
+
+    },
+    {
+        imageId: '38.png',
+        cardId: 38,
+        sideA: "Christine. Good Samaritan. Married. Always take an interest. Equal parts matchmaker and peacemaker. Will not rest until eveyone has reconciled.",
+        sideB:"Christine. High-spirited landowner. Military family. Unreserved, caring and always looking for the next adventure. Owns half of the buildings in town."
+    },
+    {
+        imageId: '39.png',
+        cardId: 39,
+        sideA: "James. Amateur boxer. Precarious Prospects. Gregarious, sun-kissed, and easy going. Few compunctions about abandoning conventional behavoir in favour of good odds or a good laugh.",
+        sideB: "James. Married. Perpetually under-dressed. Delightful in relaxed company, endlessly embarassing in good company. A little too free with his money."
+    },
+    {
+        imageId: '40.png',
+        cardId: 40,
+        sideA: "Edith. Strong-willed teenager. Well-connected family. Usually found out of doors, or evading her governess. Shy in public, but knows much more of her family's business and secrets, than she lets on.",
+        sideB:" Edith. Exurberant teenager. Influential family. Perceptive, courageous, and independent. Has substantial over her family, who have subatantial influence over the town."
+    },
+    {
+        imageId: '41.png',
+        cardId: 41,
+        sideA: "Darling. Paragon of wisdom. Married. Town's foremost advisor on affairs of the heart. Married to an absent naval captian, leaving her estate free for the high purpose of matchmaking.",
+        sideB: "Darling. Independent. Apparently Married. Always ready to offer advice, and assist in its execution. Marriend to an absent naval captain, leaving her free to make her own mark on society."
+    },
+    {
+        imageId: '42.png',
+        cardId: 42,
+        sideA: "Jacob. Curate. Rising prospects. Implusice, exurberant, and colourful. Ambitious, but distracted. Set to inherit his uncle's estate -- provided his reputation remains spotless.",
+        sideB: "Jacob. Curate. Questionable Prospects. Enthusiastic, free spirited, and a little unfashionable. His love of the Lord's wrk is matched only by his love for his own voice."
+
+    },
+    {
+        imageId: '43.png',
+        cardId: 43,
+        sideA: "Denis. Gentleman of leisure. Bit of a dandy. Quick witted romantic, amiable and flippant. Dressed in only the latest style. Suitably contemptuous of ambitious careerists and hard work.    ",
+        sideB: "Denis. Aspiring gentleman of leisure. Naval family. Exellent conversationalist, even better whist player. Desperate to marry well to avoid his father's edict that he become a naval officer."
+    },
+    {
+        imageId: '44.png',
+        cardId: 44,
+        sideA: "Joy. Town social committee member. Fun locoing and extremely talkative. Enjoys any activity that could be classed as a social occasion, and relishes the oppurtunity to share news.",
+        sideB: "Joy. Doting mother. New money. Friendly, extremely talkative, and fond of life's simple pleasures. Has three small children who are the key to obtaining her good opinion."
+    },
+    {
+        imageId: '45.png',
+        cardId: 45,
+        sideA: "Jasper. Recently wealthly. Yet unmarried. Kindly, socially awkward, and naive. Poor judge of character, and pays excessive regard to the opinons of others.",
+        sideB: "Jasper. Unexpectedly wealthy. Yet unmarried. Inherited the Barony of a distant relation. A touch naive. Pursued by a litany of suitors who he is beginning to suspect are fortune hunters."
+    },
+    {
+        imageId: '46.png',
+        cardId: 46,
+        sideA: "James. Successfull Businessman. New money. Polite, reserved, and extremely private on personal matters. New to good society. Disguises his humble origins at all costs.",
+        sideB: "James. Ruthless businessman. New money. Rich in funds but poor in titles. His cold amd mercenary personality is carefully hidden under a gentlemanly exterior."
+    },
+    {
+        imageId: '47.png',
+        cardId: 47,
+        
+    }
 
 ]
 // Serve static files from the 'src' directory

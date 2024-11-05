@@ -352,7 +352,62 @@ const imageData3 = [
     {
         imageId: '47.png',
         cardId: 47,
-        
+        sideA: "Isabel. Consummate socialite. Extremely wealthy. Friendly, wily, and forthright. Born into the peerage, a fact which she uses to her absolute advantage.",
+        sideB: "Isabel. Social tactician. Well-connected.Friendly, fashionable, and disarming. Adept in using society's opinions and conventions to her advantage. Most likely one step ahead of you."
+    },
+    {
+        imageId: '48.png',
+        cardId: 48,
+        sideA: "Daniel. Asipring professor. Modest prospects. The eternal scholar. An inexhaustible storyteller well-like by good society. Stubborn and wilful if crossed.",
+        sideB: "Daniel. Asipiring professor. Doubtful prospects. Ambitious, but poor. Always the centre of attention. His charm is his best weapon in his quest for tenure."
+    },
+    {
+        imageId: '49.png',
+        cardId: 49,
+        sideA: "Margaret. Secret romantic. New money. Sharp-witted, butting and headstrong on the surface. Secretly, she would go out of her way to see true love blossom.",
+        sideB: "Margaret. Broken-hearted. Wealthy heiress. Sharp, headstrong, and independent. Child of a widower with high expectations. Abruptly ended a previous engagement; the scandal still lingers."
+    },
+    {
+        imageId: '50.png',
+        cardId: 50,
+        sideA: "Mortimer. Awkward horticulturist. Flowering prospects. Enjoys converstaion, but rarely recalls it. Recovers from social faux pas by feigning expertise, or redirecting to the Latin names of flowers.",
+        sideB: "Mortimer. Dedicated horticulturist. Wilting prospects. His frim expression masks his social embarrassment. Spends extensive time in gardens at the cost of his meagre annual income."
+    },
+    {
+        imageId: '51.png',
+        cardId: 51,
+        sideA: "Beatrice. Orphan. Scathing wit. Smart and elegant. Her quiet smile hides her true opinion. Ward of a famed military officer. Her prospects are dependent on his generosity.",
+        sideB: "Beatrice. Newly out. Extensive dowry. Smart, resevered and well read. A sly wit for those privileged enough to hear it. Woe to the fortune hunter who thinks her an easy catch."
+    },
+    {
+        imageId: '52.png',
+        cardId: 52,
+        sideA: "Anastasia. Unconventional. Widowed. Distracted, creative, eccentric. Cad of a husband died in a horse racing accident, leaving her the estate. Cares little about society's opinion.",
+        sideB: "Anastasia. Eccentric. Artistic. Creative, warm, absent-minded. Excessively devoted ot art, and frequently holds exhibitions in her family's eclecctic estate."
+    },
+    {
+        imageId: '53.png',
+        cardId: 53,
+        sideA: "Stephanie. Outspoken. Old money. Witty, intellectual, and literary. Her privileged family background grants her the luxury of being opinionated most women cannot enjoy.",
+        sideB: "Stephanie. Bluestocking. High standards. An outspoken lover of literature. Disinclined to marry, due to a general disappointment over the quality of the average suitor."
+    },
+    {
+        imageId: '54.png',
+        cardId: 54,
+        sideA: "Edwin. Imposing. Army colonel. Strict, demanding, and old-fashioned. From a long line of distinguished military officers. Secretly proud of those he loves.",
+        sideB: "Edwin. Devoted father. Army colonel. Severe, dedicated, and thoughtful. Protective of and besotted with his children. has excessively high standards for everyone else."
+    },
+    {
+        imageId: '55.png',
+        cardId: 55,
+        sideA: "Melissa. Courageous. Fragile prospects. Possessed of an extremely short temper and can't stand beign told what to do. Desires love, but refuses to sacrifice her independence.",
+        sideB: "Melissa. Adventurous. Uncertain prospects. Practical, intrepid, and matter of fact. Craves travel abroad, but lacks means. Desires love, but is reluctant to sacrifice her passions."
+    },
+    {
+        imageId: '56.png',
+        cardId: 56,
+        sideA:"Mollie. Accomplished. Rose from humble origins. Calm, collected, and curious. Cares deeply for those around her, and generously provides others with second, third, and fourth chances.",
+        sideB: "Mollie. Philanthropic. Rose from humble. Caring, collected, and curious. Having risen to the upper gentry through tireless determination, she is well placed to advise others on the point."
     }
 
 ]

@@ -4,6 +4,9 @@ const desireImage = document.getElementById('desireImage');
 const relationshipCard = document.getElementById('relationshipCard');
 const relationshipBtn = document.getElementById('relationshipBtn');
 const relationshipImage = document.getElementById('relationshipImage');
+const npcCard = document.getElementById('npcCard');
+const npcBtn = document.getElementById('npcBtn');
+const npcImage = document.getElementById('npcImage');
 
 
 
@@ -57,19 +60,19 @@ relationshipBtn.addEventListener("click", function() {
 });
 
 // NPC card stuff here  
-async function retrieveRelation() {
-    // Generate a random number between 23 and 36
-    const randomRelationCard = Math.floor(Math.random() * 13) + 23; //13 is the number of cards in the relationship deck + 23 shifts it to start at 23
-    const imageName = `${randomRelationCard}.png`;
+async function npcRelation() {
+    // Generate a random number between 37 and 56
+    const randomNpcCard = Math.floor(Math.random() * 19) + 37; 
+    const imageName = `${randomNpcCard}.png`;
 
     try {
         const response = await fetch(`/api/images/${imageName}`);
         if (!response.ok) {
             throw new Error('Laura effed up on the relationship card');
         }
-        const imageData2 = await response.json();
-        relationshipImage.src = imageData2.url;
-        relationshipImage.alt = imageData2.description;
+        const imageData3 = await response.json();
+        npcImage.src = imageData3.url;
+        npcImage.alt = imageData3.description;
     } catch (error) {
         console.error('Error fetching image:', error);
     }

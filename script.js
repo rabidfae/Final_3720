@@ -171,3 +171,40 @@ ageEditBtn.addEventListener('click', () => {
         ageField.value = ageListItem.textContent; // It will still be a string when setting the input
     }
 });
+
+
+//Family Background things
+const famContainer = document.getElementById('famContainer');
+const famSaveBtn = document.getElementById('famSaveBtn');
+const famEditBtn = document.getElementById('famEditBtn');
+
+async function familyDrop() {
+    try {
+        const response = await fetch('/api/familyBackground/');
+        if (!response.ok) {
+            throw new Error('Failed to fetch family background data');
+        }
+        const familyBackground = await response.json();
+
+        // Create the select element
+        const select = document.createElement('select');
+        select.id = 'famInput';
+         select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light';
+
+        // Populate the select dropdown with the familyBackground data
+        familyBackground.forEach(item => {
+            const option = document.createElement('option');
+            option.value = item.famId; // Use famId or whatever unique identifier you want
+            option.textContent = `${item.famType}`; // Display the family type
+            select.appendChild(option);
+        });
+
+        // Append the select element to the desired parent element
+        famContainer.appendChild(select); // Change to the appropriate parent element
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+// Call the function to populate the dropdown when the script loads
+familyDrop();

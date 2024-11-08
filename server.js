@@ -486,6 +486,12 @@ app.get('/api/images/:imageName', (req, res) => {
     }
 });
 
+//family background info
+app.get('/api/familyBackground', (req, res) => {
+    res.send(familyBackground);
+});
+
+
 
 // Start the server
 app.listen(PORT, () => {

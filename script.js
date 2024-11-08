@@ -81,9 +81,33 @@ npcBtn.addEventListener("click", function() {
 });
 
 //Character Sheet things
-const name = document.getElementById('name');
+
 const age = document.getElementById('age');
 const nameSaveBtn = document.getElementById('nameSaveBtn');
 const ageSaveBtn = document.getElementById('editSaveBtn');
 const nameEditBtn = document.getElementById('nameEditBtn');
 const ageEditBtn = document.getElementById('ageEditBtn');
+
+document.addEventListener('DOMContentLoaded', () => {
+    const nameField = document.getElementById('nameField');
+    const nameSaveBtn = document.getElementById('nameSaveBtn');
+    const characterName = document.getElementById('characterName');
+
+nameSaveBtn.addEventListener('click', () => {
+    const name = nameField.value;
+    if (name) {
+        // Create a new list item
+        const listName = document.createElement('li');
+        listName.textContent = name;
+
+        // Append the list item to the list
+        characterName.appendChild(listName);
+
+        // Clear the input field
+        name.value = '';
+    } else {
+        console.log('Name field is empty');
+    }
+});
+
+});

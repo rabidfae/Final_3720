@@ -6,6 +6,9 @@ module.exports = {
     './server.js',],
   theme: {
     extend: {  
+      blur: {
+        xs: '2px',
+      },
       colors:{
       primary : { 
         light: 'rgb(161,229,195)',

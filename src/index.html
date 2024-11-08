@@ -17,20 +17,20 @@
           <div class="p-2 flex flex-col justify-center items-center">
             <div class="" id="desireCard">
               <img id="desireImage" src="/images/desire.png" alt="random desire card"
-                class="p-3 m-1 mx-auto rounded-3xl"></img>
+                class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="desireBtn"
-                class="bg-rose-300 hover:bg-rose-100 text-white hover:text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
+                class="bg-rose-300 hover:bg-rose-100 text-white hover:text-black  font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw Desire Card</button>
             </div>
             <div class="" id="relationshopCard">
               <img id="relationshipImage" src="/images/relationship.png" alt="random relationship card"
-                class="p-3 m-1 mx-auto rounded-3xl"></img>
+                class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="relationshipBtn"
                 class="bg-indigo-300 hover:bg-indigo-100 text-white hover:text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw Relationship Card</button>
             </div>
             <div class="" id="npcCard">
-              <img id="npcImage" src="/images/npc.png" alt="random npc card" class="p-3 m-1 mx-auto rounded-3xl"></img>
+              <img id="npcImage" src="/images/npc.png" alt="random npc card" class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="npcBtn"
                 class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
@@ -42,20 +42,23 @@
       <div class="w-2/3 m-2 p-2">
         <div class="bg-primary-dark rounded-3xl border-2 border-white">
           <h1 class="text-center text-xl text-white p-3 mb-5 bg-primary-light/30 rounded-3xl">Character Sheet</h1>
-          <form>
+     
             <div class="grid grid-cols-3 grid-rows-2 bg-primary-light/10 rounded-3xl p-2">
-              <div class="p-2 ">
-                <label for="name" class="text-white">Name:</label>
-                <input type="text" id="name" name="name" class="rounded-3xl m-1 p-1 bg-primary-light">
+              <div class="p-2" id="nameInput">
+                <ul id="characterName" class="text-white p-2 m-2"></ul>
+                <label for="nameField" class="text-white" autocomplete="off">Name:</label>
+                <input type="text" id="nameField" name="name" class="rounded-3xl m-1 p-1 bg-primary-light" autocomplete="off"
+                placeholder="Character name here">
                 <div class="flex justify-center">
                   <button id="nameSaveBtn"
                     class="border-2 rounded-2xl pl-2 pr-2  m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
                   <button id="nameEditBtn"
                     class="border-2 rounded-2xl pl-2 pr-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Edit</button>
+                   
                 </div>
               </div>
-              <div class="p-2">
-                <label for="age" class="text-white">Age:</label>
+              <!-- <div class="p-2">
+                <label for="age" class="text-white" autocomplete="off">Age:</label>
                 <input type="number" id="age" name="age" class="rounded-3xl p-1 m-1 bg-primary-light">
                 <div class="flex justify-center">
                   <button id="ageSaveBtn"
@@ -73,10 +76,11 @@
                   <button id="EditBtn"
                     class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Edit</button>
                 </div>
-              </div>
+              </div> -->
             </div>
-          </form>
+         
         </div>
+        <!--Connection sheet, right side of the screen-->
         <div class="bg-primary-dark rounded-3xl mt-4  border-2 border-white" id="">
           <h1 class="text-center text-xl text-white p-2 m-1">Connections Sheet</h1>
 

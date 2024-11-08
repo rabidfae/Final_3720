@@ -30,7 +30,8 @@
                 Draw Relationship Card</button>
             </div>
             <div class="" id="npcCard">
-              <img id="npcImage" src="/images/npc.png" alt="random npc card" class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
+              <img id="npcImage" src="/images/npc.png" alt="random npc card"
+                class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="npcBtn"
                 class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
@@ -41,33 +42,33 @@
       <!--Character sheet here. Right side of the screen.-->
       <div class="w-2/3 m-2 p-2">
         <div class="bg-primary-dark rounded-3xl border-2 border-white">
-          <h1 class="text-center text-xl text-white p-3 mb-5 bg-primary-light/30 rounded-3xl">Character Sheet</h1>
-     
-            <div class="grid grid-cols-3 grid-rows-2 bg-primary-light/10 rounded-3xl p-2">
-              <div class="p-2" id="nameInput" class="">
-                <ul id="characterName" class="text-white p-1 m-1">Name:</ul>
-                <!-- <label for="nameField" id="nameLabel" class="text-white" autocomplete="off">Name:</label> -->
-                <input type="text" id="nameField" name="name" class="rounded-3xl m-1 p-1 text-bg-primary-dark bg-primary-light" autocomplete="off"
-                placeholder="Character name here">
-                <div class="m-1">
-                  <button id="nameSaveBtn"
-                    class="border-2 rounded-2xl pl-2 pr-2  m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                  <button id="nameEditBtn"
-                    class="border-2 rounded-2xl pl-2 pr-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-                   
-                </div>
+          <h1 class="text-center text-xl text-white p-3 mb-5 rounded-3xl">Character Sheet</h1>
+           <div class="grid grid-cols-4 grid-rows-4 rounded-b-3xl items-center p-2 bg-primary-light/25">
+            <div class="p-2" id="nameInput" class="bg-primary-light/30">
+              <ul id="characterName" class="text-white p-1 m-1">Name:</ul>
+              <!-- <label for="nameField" id="nameLabel" class="text-white" autocomplete="off">Name:</label> -->
+              <input type="text" id="nameField" name="name" class="rounded-3xl m-1 p-1  bg-primary-light"
+                autocomplete="off">
+              <div class="m-1">
+                <button id="nameSaveBtn"
+                  class="border-2 rounded-2xl pl-2 pr-2  m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                <button id="nameEditBtn"
+                  class="border-2 rounded-2xl pl-2 pr-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+
               </div>
-          <div class="p-2">
-                <label for="age" class="text-white" autocomplete="off">Age:</label>
-                <input type="number" id="age" name="age" class="rounded-3xl p-1 m-1 bg-primary-light">
-                <div class="flex justify-center">
-                  <button id="ageSaveBtn"
-                    class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                  <button id="ageEditBtn"
-                    class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Edit</button>
-                </div>
-              </div> 
-              <!-- <div class="p-2">
+            </div>
+            <div class="p-2" id="ageInput">
+              <ul id="characterAge" class="text-white p-1 m-1">Age:</ul>
+              <!-- <label for="age" class="text-white" autocomplete="off">Age:</label> -->
+              <input type="number" id="ageField" name="age" class="rounded-3xl p-1 m-1 bg-primary-light">
+              <div class="m-1">
+                <button id="ageSaveBtn"
+                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                <button id="ageEditBtn"
+                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+              </div>
+            </div>
+            <!-- <div class="p-2">
                 <label for="" class="text-white">Something:</label>
                 <input type="number" id="" name="" class="rounded-3xl bg-primary-light p-1 m-1">
                 <div class="flex justify-center">
@@ -77,8 +78,8 @@
                     class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Edit</button>
                 </div>
               </div> -->
-            </div>
-         
+          </div>
+
         </div>
         <!--Connection sheet, right side of the screen-->
         <div class="bg-primary-dark rounded-3xl mt-4  border-2 border-white" id="">

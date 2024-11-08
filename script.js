@@ -81,27 +81,32 @@ npcBtn.addEventListener("click", function() {
 });
 
 //Character Sheet things
-const age = document.getElementById('age');
-const nameSaveBtn = document.getElementById('nameSaveBtn');
-const ageSaveBtn = document.getElementById('editSaveBtn');
-const nameEditBtn = document.getElementById('nameEditBtn');
-const ageEditBtn = document.getElementById('ageEditBtn');
-const nameField = document.getElementById('nameField');
-const characterName = document.getElementById('characterName');
 
-let listItem; // Variable to hold the last created list item
+
+const nameEditBtn = document.getElementById('nameEditBtn');
+const nameSaveBtn = document.getElementById('nameSaveBtn');
+const characterName = document.getElementById('characterName');
+const nameField = document.getElementById('nameField');
+
+const ageSaveBtn = document.getElementById('ageSaveBtn');
+const ageEditBtn = document.getElementById('ageEditBtn');
+const ageField = document.getElementById('ageField');
+const characterAge = document.getElementById('characterAge');
+
+let nameListItem; // Variable to hold the last created list item
+let ageListItem; // Variable to hold the last created list item
 
 nameSaveBtn.addEventListener('click', () => {
-    const name = nameField.value;
+    const name = nameField.value.trim()
     if (name) {
-        if (listItem) {
+        if (nameListItem) {
             // Update the existing list item
-            listItem.textContent = name;
+            nameListItem.textContent = name;
         } else {
             // Create a new list item
-            listItem = document.createElement('li');
-            listItem.textContent = name;
-            characterName.appendChild(listItem);
+            nameListItem = document.createElement('li');
+            nameListItem.textContent = name;
+            characterName.appendChild(nameListItem);
         }
 
         // Clear the input field
@@ -123,7 +128,46 @@ nameEditBtn.addEventListener('click', () => {
     nameEditBtn.classList.add('hidden');
 
     // Set the input field value to the last list item's text
-    if (listItem) {
-        nameField.value = listItem.textContent;
+    if (nameListItem) {
+        nameField.value = nameListItem.textContent;
+    }
+});
+
+// Age section
+ageSaveBtn.addEventListener('click', () => {
+    const age = ageField.value.trim();
+    if (age) {
+        const ageNumber = Number(age); // Convert to number
+        if (ageListItem) {
+            // Update the existing list item
+            ageListItem.textContent = ageNumber; // Store the number
+        } else {
+            // Create a new list item
+            ageListItem = document.createElement('li');
+            ageListItem.textContent = ageNumber; // Store the number
+            characterAge.appendChild(ageListItem);
+        }
+
+        // Clear the input field
+        ageField.value = '';
+
+        // Hide the input and save button, show the edit button
+        ageField.classList.add('hidden');
+        ageSaveBtn.classList.add('hidden');
+        ageEditBtn.classList.remove('hidden');
+    } else {
+        console.log('Age field is empty');
+    }
+});
+
+ageEditBtn.addEventListener('click', () => {
+    // Show the input and save button, hide the edit button
+    ageField.classList.remove('hidden');
+    ageSaveBtn.classList.remove('hidden');
+    ageEditBtn.classList.add('hidden');
+
+    // Set the input field value to the last list item's text
+    if (ageListItem) {
+        ageField.value = ageListItem.textContent; // It will still be a string when setting the input
     }
 });

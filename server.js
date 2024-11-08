@@ -78,25 +78,51 @@ const familyBackground = [
     {
         famId: 3,
         famType: 'Humble Origins',
+        info: 'Jesus, they say, was born in a stable—and though few know it, your place of emergence was little better. Hard times hit your family without notice, and have made you humble and resourceful. Your circumstances have won you the trust of poorer people even as your wealthier relations strive to teach you to rise above them',
+        intialReputation: {
+            positive: 'Sweet, obedient, tough, innocent, open.',
+            negative: 'Dirty, ignorant, poor, dangerous, stupid.',
+        }
 
     },
     {
         famId: 4,
         famType: 'Clergy',
+        info:'There is nothing more worthy of the expended effort of the generations before you than knowledge of the divine. Your coffers have grown but modestly from your family’s labour, but you are unconcerned. For your true inheritance came in a different form—your substantial moral capital.',
+        intialReputation: {
+            positive: 'Kind, knowledgeable, moral, charismatic, devoted.',
+            negative: 'Dull, hypocritical, greedy, out-of-touch, useless.',
+        }
     },
     {
         famId: 5,
         famType: 'Military',
+        info: 'Though in reality looks may be deceiving, your family has no qualms in equating sound body with honourable character. As those before you, you were born to stare in the eye the worst humanity has to offer, and yet remain genteel. Your family may be strict, but their unwavering discipline has driven them only to vast accomplishment',
+        intialReputation: {
+            positive: 'Brave, steadfast,honourable, capable, forthright.',
+            negative: 'Blunt, cold, reckless, aloof, angry.',
+        }
     },
     {
         famId: 6,
         famType: 'Ill-Reputed',
+        info:'There is little more tedious than being born to a family constantly plagued by scandal. Always finding yourself having to move from place to place, constantly finding out that some uncle or another has offended fashionable society, and thus excluding you from the latest ball. Not to mention the questions you have to field at church on a weekly basis. If only everybody would conduct themselves sensibly—society that is, you love your family dearly.',
+        intialReputation: {
+            positive: ' Reformed, experienced, repentant, unique, widespread',
+            negative: 'Immoral,irresponsible,ruined, indebted, unpredictable.',
+        }
 
     },
     {
         famId: 7,
         famType: 'Foreign',
+        info:'It isn’t simply that your family is “not from here”, though indeed none of your family had lived nearby until recent times. Rather, it is where you are from that you find fills your life with both prejudice, and delight. On one hand, you will always retain the burden of an outsider. On the other hand, it is surprising how often “outlandish customs” prove themselves useful.',
+        intialReputation: {
+            positive: 'Charming, fascinating,cultured, worldly, refreshing',
+            negative: ' Uncouth, strange,prejudiced, misinformed, hostile.',
+        }
     }
+
 ]
 
 const imageData = [

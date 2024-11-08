@@ -49,15 +49,31 @@ const familyBackground = [
     {
         famId: 0,
         famType: 'Old Money',
-
+            info: 'Since your distant ancestor hired his first historian, hisory has told of your family’s superiority in station and economy. On occasion, you pay visit to the family vault, and imagine your progenitors admiring the same golden trinkets as you now cradle in your hands',
+            intialReputation: {
+                positive: 'Sensible, well-connected, dependable, generous, caring',
+                negative: 'Old-fashioned, miserly, overbearing, self-obsessed, tasteless.',
+        
+            },
     },
     {
         famId: 1,
         famType: 'Peerage',
+            info:'Whichever ancestor replaced the dull grunt of “Mrs”with the pleasant tones of “Lady”, you cannot help but be daily grateful. For in being so elevated they gave you and yours a gift which withstands the infidelities of wealth and reputation. Those four letters which appear before your name grant you access to situations and circles, which in truth, you have little business entering.',
+            title:' Earl/Countess,Viscount/Viscountess, Baron/Baroness, Sir, Lord, Lady, the Honourable.',
+            intialReputation: {
+                positive: 'Influential, austere, wise,famous, giving.',
+                negative: 'Vain, proud, vengeful, incompetent, mean-spirited.',
+            }
     },
     {
         famId: 2,
         famType: 'New Money',
+        info:'England’s industrial age charges but forward, and yours was the family that grabbed it by the horns and rode it bareback to substantial wealth. Though your parents are not genteel in manners, their considerable influence in economic matters has convinced most that they are still worthy of association.',
+        intialReputation: {
+            positive: 'Rich, ambitious, clever,industrious, novel.',
+            negative: 'Vulgar, outsider, uneducated, unfortunate connections, common',
+        }
     },
     {
         famId: 3,

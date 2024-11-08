@@ -1,3 +1,5 @@
+
+//Card things
 const desireCard = document.getElementById('desireCard');
 const desireBtn = document.getElementById('desireBtn');
 const desireImage = document.getElementById('desireImage');
@@ -7,10 +9,6 @@ const relationshipImage = document.getElementById('relationshipImage');
 const npcCard = document.getElementById('npcCard');
 const npcBtn = document.getElementById('npcBtn');
 const npcImage = document.getElementById('npcImage');
-
-
-
-
 
 //desire card things
 async function retrieveDesire() {
@@ -81,3 +79,11 @@ async function npcRelation() {
 npcBtn.addEventListener("click", function() {
     npcRelation();
 });
+
+//Character Sheet things
+const name = document.getElementById('name');
+const age = document.getElementById('age');
+const nameSaveBtn = document.getElementById('nameSaveBtn');
+const ageSaveBtn = document.getElementById('editSaveBtn');
+const nameEditBtn = document.getElementById('nameEditBtn');
+const ageEditBtn = document.getElementById('ageEditBtn');

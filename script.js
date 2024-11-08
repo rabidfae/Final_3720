@@ -81,33 +81,49 @@ npcBtn.addEventListener("click", function() {
 });
 
 //Character Sheet things
-
 const age = document.getElementById('age');
 const nameSaveBtn = document.getElementById('nameSaveBtn');
 const ageSaveBtn = document.getElementById('editSaveBtn');
 const nameEditBtn = document.getElementById('nameEditBtn');
 const ageEditBtn = document.getElementById('ageEditBtn');
+const nameField = document.getElementById('nameField');
+const characterName = document.getElementById('characterName');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const nameField = document.getElementById('nameField');
-    const nameSaveBtn = document.getElementById('nameSaveBtn');
-    const characterName = document.getElementById('characterName');
+let listItem; // Variable to hold the last created list item
 
 nameSaveBtn.addEventListener('click', () => {
     const name = nameField.value;
     if (name) {
-        // Create a new list item
-        const listName = document.createElement('li');
-        listName.textContent = name;
-
-        // Append the list item to the list
-        characterName.appendChild(listName);
+        if (listItem) {
+            // Update the existing list item
+            listItem.textContent = name;
+        } else {
+            // Create a new list item
+            listItem = document.createElement('li');
+            listItem.textContent = name;
+            characterName.appendChild(listItem);
+        }
 
         // Clear the input field
-        name.value = '';
+        nameField.value = '';
+
+        // Hide the input and save button, show the edit button
+        nameField.classList.add('hidden');
+        nameSaveBtn.classList.add('hidden');
+        nameEditBtn.classList.remove('hidden');
     } else {
         console.log('Name field is empty');
     }
 });
 
+nameEditBtn.addEventListener('click', () => {
+    // Show the input and save button, hide the edit button
+    nameField.classList.remove('hidden');
+    nameSaveBtn.classList.remove('hidden');
+    nameEditBtn.classList.add('hidden');
+
+    // Set the input field value to the last list item's text
+    if (listItem) {
+        nameField.value = listItem.textContent;
+    }
 });

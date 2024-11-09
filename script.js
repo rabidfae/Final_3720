@@ -174,6 +174,7 @@ ageEditBtn.addEventListener('click', () => {
 
 
 //Family Background things
+
 const famContainer = document.getElementById('famContainer');
 const famSaveBtn = document.getElementById('famSaveBtn');
 const famEditBtn = document.getElementById('famEditBtn');
@@ -189,18 +190,17 @@ async function familyDrop() {
         // Create the select element
         const select = document.createElement('select');
         select.id = 'famInput';
-         select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light';
+         select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
 
         // Populate the select dropdown with the familyBackground data
         familyBackground.forEach(item => {
             const option = document.createElement('option');
-            option.value = item.famId; // Use famId or whatever unique identifier you want
+            option.value = item.famId; // Use famId 
             option.textContent = `${item.famType}`; // Display the family type
             select.appendChild(option);
         });
 
-        // Append the select element to the desired parent element
-        famContainer.appendChild(select); // Change to the appropriate parent element
+        famContainer.appendChild(select); 
     } catch (error) {
         console.error(error.message);
     }
@@ -208,3 +208,4 @@ async function familyDrop() {
 
 // Call the function to populate the dropdown when the script loads
 familyDrop();
+

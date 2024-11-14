@@ -7,7 +7,9 @@
 
 <body class="bg-primary-light">
   <main>
+
     <div class="flex flex-row">
+      <!--Card draws here. Left side of screen-->
       <div class="flex m-2 p-2 w-1/3">
         <div class="bg-primary-light items-center justify-center">
           <img class="h-48 rounded-3xl mx-auto" src="/images/logo.png"
@@ -15,65 +17,74 @@
           <div class="p-2 flex flex-col justify-center items-center">
             <div class="" id="desireCard">
               <img id="desireImage" src="/images/desire.png" alt="random desire card"
-                class="p-3 m-1 mx-auto rounded-3xl"></img>
+                class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="desireBtn"
-                class="bg-rose-300 hover:bg-rose-100 text-white hover:text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
+                class="bg-rose-300 hover:bg-rose-100 text-white hover:text-black  font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw Desire Card</button>
             </div>
             <div class="" id="relationshopCard">
               <img id="relationshipImage" src="/images/relationship.png" alt="random relationship card"
-                class="p-3 m-1 mx-auto rounded-3xl"></img>
+                class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="relationshipBtn"
                 class="bg-indigo-300 hover:bg-indigo-100 text-white hover:text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw Relationship Card</button>
             </div>
             <div class="" id="npcCard">
               <img id="npcImage" src="/images/npc.png" alt="random npc card"
-                class="p-3 m-1 mx-auto rounded-3xl"></img>
+                class="p-3 m-1 mx-auto rounded-3xl hover:blur-xs"></img>
               <button id="npcBtn"
-                class="bg-yellow-100 hover:bg-yellow-200 text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
+                class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
             </div>
           </div>
         </div>
       </div>
+      <!--Character sheet here. Right side of the screen.-->
       <div class="w-2/3 m-2 p-2">
-        <div class="bg-primary-dark rounded-3xl">
-          <p class="p-2 m-1">Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum
-            cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains
-            sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead
-            survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, imo
-            evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat
-            cerebella pitiutary gland viventium. Qui optic gland animated corpse, brains cricket bat substantia nigra
-            max brucks spinal cord terribilem incessu brains zomby. The medulla voodoo sacerdos locus coeruleus flesh
-            eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus.
-            Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio
-            brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror. Nigh basal ganglia
-            tofth eliv ingdead.
-            Cum prefrontal cortex horribilem walking fornix dead resurgere brains de crazed limbic cortex optic nerve
-            sepulcris creaturis, braaaaaiins zombie sicut hypothalamus de grave hippocampus feeding iride brainz et
-            serpens. Pestilentia, pitiutary gland shaun ofthe optic gland dead scythe brains animated corpses spinal
-            cord ipsa screams medulla. Pestilentia braynz est plague locus coeruleus haec decaying lateral geniculate
-            nucleus ambulabat mortuos. Sicut breins zeder apathetic superior colliculus malus voodoo. Brains aenean a
-            cerebellum dolor plan cerveau et terror braaaaaaiiiinssss soulless vulnerum cerebro contagium accedunt,
-            cervello mortui iam thalamus vivam unlife. Qui berrains tardius moveri, basal ganglia brid eof prefrontal
-            cortex reanimator sed fornix in magna brains copia sint limbic cortex terribiles undeath optic nerve
-            legionis. Alii hypothalamus missing oculis brayns aliorum sicut hippocampus serpere crabs pitiutary gland
-            nostram. Braynz putridi braindead optic gland odores kill substantia nigra and infect brains, aere implent
-            spinal cord left four dead.
+        <div class="bg-primary-dark rounded-3xl border-2 border-white">
+          <h1 class="text-center text-xl text-white p-3 mb-5 rounded-3xl">Character Sheet</h1>
+           <div class="grid grid-cols-4 grid-rows-4 rounded-b-3xl items-center p-2 bg-primary-light/25">
+            <div class="p-2" id="nameInput" class="bg-primary-light/30">
+              <ul id="characterName" class="text-white p-1 m-1">Name:</ul>
+              <!-- <label for="nameField" id="nameLabel" class="text-white" autocomplete="off">Name:</label> -->
+              <input type="text" id="nameField" name="name" class="rounded-3xl m-1 p-1  bg-primary-light"
+                autocomplete="off">
+              <div class="m-1">
+                <button id="nameSaveBtn"
+                  class="border-2 rounded-2xl pl-2 pr-2  m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                <button id="nameEditBtn"
+                  class="border-2 rounded-2xl pl-2 pr-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
 
-            Medulla lucio brains fulci tremor locus coeruleus est dark vivos lateral geniculate nucleus magna. Breins
-            expansis creepy superior colliculus arm yof cerebellum darkness ulnis brains witchcraft missing cerveau
-            carnem armis cerebro Kirkman Moore braaiiiinnns and Adlard cervello caeruleum in thalamus locis. Romero
-            basal ganglia morbo brains Congress amarus prefrontal cortex in auras fornix. Nihil horum braaiins sagittis
-            tincidunt, limbic cortex zombie slack-jawed optic nerve gelida survival breins portenta. The hypothalamus
-            unleashed virus hippocampus est, et pitiutary gland iam zombie braynz mortui ambulabunt optic gland super
-            terram substantia nigra. Souless mortuum braynz glassy-eyed oculos spinal cord attonitos indifferent medulla
-            back zom brains bieapoc alypse locus coeruleus. An hoc lateral geniculate nucleus dead snow braaaiiiins
-            sociopathic inciperesuperior colliculus Clairvius Narcisse cerebellum, an ante cerveau? Is bello brains
-            mundi z?</p>
+              </div>
+            </div>
+            <div class="p-2" id="ageInput">
+              <ul id="characterAge" class="text-white p-1 m-1">Age:</ul>
+              <!-- <label for="age" class="text-white" autocomplete="off">Age:</label> -->
+              <input type="number" id="ageField" name="age" class="rounded-3xl p-1 m-1 bg-primary-light">
+              <div class="m-1">
+                <button id="ageSaveBtn"
+                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                <button id="ageEditBtn"
+                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+              </div>
+            </div>
+            <div class="p-2">
+                <label class="text-white ml-1">Family Background:</label>
+                <div id="famContainer" class="rounded-3xl"></div> 
+               <div class="">
+                  <button id="famSaveBtn"
+                    class="border-2 rounded-2xl pr-2 pl-2 m-1   bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  <button id="famEditBtn"
+                    class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                </div>
+              </div>
+          </div>
+
         </div>
-        <div class="bg-primary-dark rounded-3xl mt-4" id="">
+        <!--Connection sheet, right side of the screen-->
+        <div class="bg-primary-dark rounded-3xl mt-4  border-2 border-white" id="">
+          <h1 class="text-center text-xl text-white p-2 m-1">Connections Sheet</h1>
+
           <p class="p-2 m-1">Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum
             cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains
             sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead
@@ -111,6 +122,7 @@
       </div>
   </main>
 </body>
-<footer>
+<footer class="bg-primary-dark/20 text-primary-dark text-center p-4">
+  | Laura Watkin 2024 |
   <script src="script.js"></script>
 </footer>

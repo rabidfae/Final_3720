@@ -6,7 +6,7 @@ const PORT = 3000;
 const characterRole = [
     {
         roleId: 0,
-        role: 'heir',
+        role: 'Heir',
     }, 
     {
         roleId: 1,
@@ -490,7 +490,10 @@ app.get('/api/images/:imageName', (req, res) => {
 app.get('/api/familyBackground', (req, res) => {
     res.send(familyBackground);
 });
-
+// character role info
+app.get('/api/characterRole', (req, res) => {
+    res.send(characterRole);
+});
 
 
 // Start the server

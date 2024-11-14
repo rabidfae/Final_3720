@@ -209,3 +209,36 @@ async function familyDrop() {
 // Call the function to populate the dropdown when the script loads
 familyDrop();
 
+const roleContainer = document.getElementById('roleContainer');
+const roleSaveBtn = document.getElementById('roleSaveBtn');
+const roleEditBtn = document.getElementById('roleEditBtn');
+
+async function roleDrop() {
+    try {
+        const response = await fetch('/api/characterRole/');
+        if (!response.ok) {
+            throw new Error('Failed to fetch Character role data');
+        }
+        const roleBackground = await response.json();
+
+        // Create the select element
+        const select = document.createElement('select');
+        select.id = 'roleInput';
+         select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
+
+        // Populate the select dropdown with the roleBackground data
+        roleBackground.forEach(item => {
+            const option = document.createElement('option');
+            option.value = item.roleId; // Use roleId 
+            option.textContent = `${item.role}`; // Display the role
+            select.appendChild(option);
+        });
+
+        roleContainer.appendChild(select); 
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+// Call the function to populate the dropdown when the script loads
+roleDrop();

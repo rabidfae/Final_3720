@@ -15,18 +15,12 @@ async function retrieveDesire() {
     // Generate a random number between 1 and 22
     const randomDesireCard = Math.floor(Math.random() * 22) + 1;
     const imageName = `${randomDesireCard}.png`;
+    const response = await fetch(`/api/images/${imageName}`);
+    const imageData = await response.json();
 
-    try {
-        const response = await fetch(`/api/images/${imageName}`);
-        if (!response.ok) {
-            throw new Error('Laura effed up on the desire card');
-        }
-        const imageData = await response.json();
-        desireImage.src = imageData.url;
-        desireImage.alt = imageData.description;
-    } catch (error) {
-        console.error('Error fetching image:', error);
-    }
+    desireImage.src = imageData.url;
+    desireImage.alt = imageData.description;
+
 }
 // Add an event listener to the button
 desireBtn.addEventListener("click", function () {
@@ -39,18 +33,12 @@ async function retrieveRelation() {
     // Generate a random number between 23 and 36
     const randomRelationCard = Math.floor(Math.random() * 13) + 23; //13 is the number of cards in the relationship deck + 23 shifts it to start at 23
     const imageName = `${randomRelationCard}.png`;
+    const response = await fetch(`/api/images/${imageName}`);
+    const imageData2 = await response.json();
 
-    try {
-        const response = await fetch(`/api/images/${imageName}`);
-        if (!response.ok) {
-            throw new Error('Laura effed up on the relationship card');
-        }
-        const imageData2 = await response.json();
-        relationshipImage.src = imageData2.url;
-        relationshipImage.alt = imageData2.description;
-    } catch (error) {
-        console.error('Error fetching image:', error);
-    }
+    relationshipImage.src = imageData2.url;
+    relationshipImage.alt = imageData2.description;
+
 }
 // Add an event listener to the button
 relationshipBtn.addEventListener("click", function () {
@@ -62,18 +50,12 @@ async function npcRelation() {
     // Generate a random number between 37 and 56
     const randomNpcCard = Math.floor(Math.random() * 19) + 37;
     const imageName = `${randomNpcCard}.png`;
+    const response = await fetch(`/api/images/${imageName}`);
+    const imageData3 = await response.json();
 
-    try {
-        const response = await fetch(`/api/images/${imageName}`);
-        if (!response.ok) {
-            throw new Error('Laura effed up on the relationship card');
-        }
-        const imageData3 = await response.json();
-        npcImage.src = imageData3.url;
-        npcImage.alt = imageData3.description;
-    } catch (error) {
-        console.error('Error fetching image:', error);
-    }
+    npcImage.src = imageData3.url;
+    npcImage.alt = imageData3.description;
+
 }
 // Add an event listener to the button
 npcBtn.addEventListener("click", function () {
@@ -127,7 +109,7 @@ nameEditBtn.addEventListener('click', () => {
 
     // Set the input field value to the last list item's text
     nameField.value = nameListItem.textContent;
-    
+
 });
 
 // Age section
@@ -177,7 +159,7 @@ const famSaveBtn = document.getElementById('famSaveBtn');
 const famEditBtn = document.getElementById('famEditBtn');
 
 async function familyDrop() {
-    const response = await fetch('/api/familyBackground/');      
+    const response = await fetch('/api/familyBackground/');
     const familyBackground = await response.json();
 
     // Create the select element
@@ -191,13 +173,13 @@ async function familyDrop() {
         option.value = item.famId; // Use famId 
         option.textContent = `${item.famType}`; // Display the family type
         select.appendChild(option);
-        });
+    });
 
-        famContainer.appendChild(select);
-    
+    famContainer.appendChild(select);
+
 }
 famSaveBtn.addEventListener('click', async () => {
-    const famId = document.getElementById('famInput').value;  
+    const famId = document.getElementById('famInput').value;
     const response = await fetch(`/api/familyBackground/${famId}`);
     const familyData = await response.json();
     const info = familyData.info;
@@ -257,10 +239,9 @@ async function roleDrop() {
         option.value = item.roleId; // Use roleId 
         option.textContent = `${item.role}`; // Display the role
         select.appendChild(option);
-     });
+    });
 
     roleContainer.appendChild(select);
-  
 }
 
 roleSaveBtn.addEventListener('click', () => {
@@ -276,7 +257,7 @@ roleSaveBtn.addEventListener('click', () => {
     roleInfo.id = 'roleInfo';
     roleInfo.textContent = roleText;
     roleContainer.appendChild(roleInfo);
-    roleInfo.classList.add('text-white','pl-1');
+    roleInfo.classList.add('text-white', 'pl-1');
 
     // Hide the save button and show the edit button
     roleSaveBtn.classList.add('hidden');
@@ -292,7 +273,7 @@ roleEditBtn.addEventListener('click', () => {
 
     // Remove the roleInfo element from the DOM
     roleContainer.removeChild(roleInfo);
-  
+
     // Show the save button and hide the edit button
     roleSaveBtn.classList.remove('hidden');
     roleEditBtn.classList.add('hidden');

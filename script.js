@@ -205,10 +205,53 @@ async function familyDrop() {
         console.error(error.message);
     }
 }
+famSaveBtn.addEventListener('click', async () => {
+    const famId = document.getElementById('famInput').value;
+    if (!famId) {
+        console.log('Family background field is empty');
+        return;
+    }
 
+    try {
+        const response = await fetch(`/api/familyBackground/${famId}`);
+        if (!response.ok) {
+            throw new Error('Failed to fetch family background data');
+        }
+        const familyData = await response.json();
+        const info = familyData.info;
+
+        if (!info) {
+            console.log('No family info found');
+            return;
+        }
+
+        // Create and append the paragraph with the fetched info
+        const famInfoParagraph = document.createElement('p');
+        famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm');
+        famInfoParagraph.textContent = info;
+        famContainer.appendChild(famInfoParagraph);
+    } catch (error) {
+        console.error(error.message);
+    }
+
+    famSaveBtn.classList.add('hidden');
+    famEditBtn.classList.remove('hidden');
+});
+
+famEditBtn.addEventListener('click', () => {
+    // Remove the paragraph with the fetched info
+    const famInfoParagraph = document.querySelector('.fam-info-paragraph');
+    if (famInfoParagraph) {
+        famContainer.removeChild(famInfoParagraph);
+    }
+
+    famSaveBtn.classList.remove('hidden');
+    famEditBtn.classList.add('hidden');
+});
 // Call the function to populate the dropdown when the script loads
 familyDrop();
 
+// Character Role things
 const roleContainer = document.getElementById('roleContainer');
 const roleSaveBtn = document.getElementById('roleSaveBtn');
 const roleEditBtn = document.getElementById('roleEditBtn');
@@ -224,7 +267,7 @@ async function roleDrop() {
         // Create the select element
         const select = document.createElement('select');
         select.id = 'roleInput';
-         select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
+        select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
 
         // Populate the select dropdown with the roleBackground data
         roleBackground.forEach(item => {

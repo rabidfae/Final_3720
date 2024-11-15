@@ -466,7 +466,6 @@ app.get('/', (req, res) => {
 });
 
 
-
 // Endpoint to get image data by name
 app.get('/api/images/:imageName', (req, res) => {
     const imageName = req.params.imageName;
@@ -489,6 +488,17 @@ app.get('/api/images/:imageName', (req, res) => {
 //family background info
 app.get('/api/familyBackground', (req, res) => {
     res.send(familyBackground);
+});
+
+app.get('/api/familyBackground/:famId', (req, res) => {
+    const famId = parseInt(req.params.famId, 10); // Parse famId as an integer
+    const family = familyBackground.find(fam => fam.famId === famId);
+
+    if (family) {
+        res.send(family);
+    } else {
+        res.status(404).send('Family background not found');
+    }   
 });
 // character role info
 app.get('/api/characterRole', (req, res) => {

@@ -207,23 +207,10 @@ async function familyDrop() {
 }
 famSaveBtn.addEventListener('click', async () => {
     const famId = document.getElementById('famInput').value;
-    if (!famId) {
-        console.log('Family background field is empty');
-        return;
-    }
-
     try {
         const response = await fetch(`/api/familyBackground/${famId}`);
-        if (!response.ok) {
-            throw new Error('Failed to fetch family background data');
-        }
         const familyData = await response.json();
         const info = familyData.info;
-
-        if (!info) {
-            console.log('No family info found');
-            return;
-        }
 
         // Create and append the paragraph with the fetched info
         const famInfoParagraph = document.createElement('p');
@@ -233,7 +220,6 @@ famSaveBtn.addEventListener('click', async () => {
     } catch (error) {
         console.error(error.message);
     }
-
     famSaveBtn.classList.add('hidden');
     famEditBtn.classList.remove('hidden');
 });

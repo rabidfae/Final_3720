@@ -199,23 +199,25 @@ async function familyDrop() {
     
 }
 famSaveBtn.addEventListener('click', async () => {
-    const famId = document.getElementById('famInput').value;
-    
-
+    const famId = document.getElementById('famInput').value;  
     const response = await fetch(`/api/familyBackground/${famId}`);
     const familyData = await response.json();
     const info = familyData.info;
+    const type = familyData.famType;
 
     // Create and append the paragraph with the fetched info
+    const famInfoHeader = document.createElement('p');
+    famInfoHeader.classList.add('fam-info-header', 'text-white', 'pl-1');
+    famInfoHeader.textContent = type;
+    famContainer.appendChild(famInfoHeader);
+
     const famInfoParagraph = document.createElement('p');
-    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm');
+    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm', 'pl-1');
     famInfoParagraph.textContent = info;
     famContainer.appendChild(famInfoParagraph);
 
     // Hide the select element
     famInput.classList.add('hidden');
-
-
     famSaveBtn.classList.add('hidden');
     famEditBtn.classList.remove('hidden');
 });
@@ -226,7 +228,10 @@ famEditBtn.addEventListener('click', () => {
     if (famInfoParagraph) {
         famContainer.removeChild(famInfoParagraph);
     }
-
+    const famInfoHeader = document.querySelector('.fam-info-header');
+    if (famInfoHeader) {
+        famContainer.removeChild(famInfoHeader);
+    }
     famInput.classList.remove('hidden');
     famSaveBtn.classList.remove('hidden');
     famEditBtn.classList.add('hidden');

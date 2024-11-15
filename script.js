@@ -81,8 +81,6 @@ npcBtn.addEventListener("click", function () {
 });
 
 //Character Sheet things
-
-
 const nameEditBtn = document.getElementById('nameEditBtn');
 const nameSaveBtn = document.getElementById('nameSaveBtn');
 const characterName = document.getElementById('characterName');
@@ -248,27 +246,26 @@ async function roleDrop() {
     const response = await fetch('/api/characterRole/');
     const roleBackground = await response.json();
 
-        // Create the select element
-        const select = document.createElement('select');
-        select.id = 'roleInput';
-        select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
+    // Create the select element
+    const select = document.createElement('select');
+    select.id = 'roleInput';
+    select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
 
-        // Populate the select dropdown with the roleBackground data
-        roleBackground.forEach(item => {
-            const option = document.createElement('option');
-            option.value = item.roleId; // Use roleId 
-            option.textContent = `${item.role}`; // Display the role
-            select.appendChild(option);
-        });
+    // Populate the select dropdown with the roleBackground data
+    roleBackground.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.roleId; // Use roleId 
+        option.textContent = `${item.role}`; // Display the role
+        select.appendChild(option);
+     });
 
-        roleContainer.appendChild(select);
+    roleContainer.appendChild(select);
   
 }
 
 roleSaveBtn.addEventListener('click', () => {
     const roleInput = document.getElementById('roleInput');
     const selectedOption = roleInput.options[roleInput.selectedIndex];
-    const roleId = selectedOption ? selectedOption.value : '';
     const roleText = selectedOption ? selectedOption.textContent : '';
 
     // Hide the select element
@@ -285,6 +282,7 @@ roleSaveBtn.addEventListener('click', () => {
     roleSaveBtn.classList.add('hidden');
     roleEditBtn.classList.remove('hidden');
 });
+
 roleEditBtn.addEventListener('click', () => {
     const roleInput = document.getElementById('roleInput');
     const roleInfo = document.getElementById('roleInfo');

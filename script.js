@@ -29,7 +29,7 @@ async function retrieveDesire() {
     }
 }
 // Add an event listener to the button
-desireBtn.addEventListener("click", function() {
+desireBtn.addEventListener("click", function () {
     retrieveDesire();
 });
 
@@ -53,14 +53,14 @@ async function retrieveRelation() {
     }
 }
 // Add an event listener to the button
-relationshipBtn.addEventListener("click", function() {
+relationshipBtn.addEventListener("click", function () {
     retrieveRelation();
 });
 
 // NPC card stuff here  
 async function npcRelation() {
     // Generate a random number between 37 and 56
-    const randomNpcCard = Math.floor(Math.random() * 19) + 37; 
+    const randomNpcCard = Math.floor(Math.random() * 19) + 37;
     const imageName = `${randomNpcCard}.png`;
 
     try {
@@ -76,7 +76,7 @@ async function npcRelation() {
     }
 }
 // Add an event listener to the button
-npcBtn.addEventListener("click", function() {
+npcBtn.addEventListener("click", function () {
     npcRelation();
 });
 
@@ -128,9 +128,8 @@ nameEditBtn.addEventListener('click', () => {
     nameEditBtn.classList.add('hidden');
 
     // Set the input field value to the last list item's text
-    if (nameListItem) {
-        nameField.value = nameListItem.textContent;
-    }
+    nameField.value = nameListItem.textContent;
+    
 });
 
 // Age section
@@ -180,46 +179,43 @@ const famSaveBtn = document.getElementById('famSaveBtn');
 const famEditBtn = document.getElementById('famEditBtn');
 
 async function familyDrop() {
-    try {
-        const response = await fetch('/api/familyBackground/');
-        if (!response.ok) {
-            throw new Error('Failed to fetch family background data');
-        }
-        const familyBackground = await response.json();
+    const response = await fetch('/api/familyBackground/');      
+    const familyBackground = await response.json();
 
-        // Create the select element
-        const select = document.createElement('select');
-        select.id = 'famInput';
-         select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
+    // Create the select element
+    const select = document.createElement('select');
+    select.id = 'famInput';
+    select.className = 'form-select p-2 m-1 mt-3 rounded-3xl bg-primary-light text-primary-dark';
 
-        // Populate the select dropdown with the familyBackground data
-        familyBackground.forEach(item => {
-            const option = document.createElement('option');
-            option.value = item.famId; // Use famId 
-            option.textContent = `${item.famType}`; // Display the family type
-            select.appendChild(option);
+    // Populate the select dropdown with the familyBackground data
+    familyBackground.forEach(item => {
+        const option = document.createElement('option');
+        option.value = item.famId; // Use famId 
+        option.textContent = `${item.famType}`; // Display the family type
+        select.appendChild(option);
         });
 
-        famContainer.appendChild(select); 
-    } catch (error) {
-        console.error(error.message);
-    }
+        famContainer.appendChild(select);
+    
 }
 famSaveBtn.addEventListener('click', async () => {
     const famId = document.getElementById('famInput').value;
-    try {
-        const response = await fetch(`/api/familyBackground/${famId}`);
-        const familyData = await response.json();
-        const info = familyData.info;
+    
 
-        // Create and append the paragraph with the fetched info
-        const famInfoParagraph = document.createElement('p');
-        famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm');
-        famInfoParagraph.textContent = info;
-        famContainer.appendChild(famInfoParagraph);
-    } catch (error) {
-        console.error(error.message);
-    }
+    const response = await fetch(`/api/familyBackground/${famId}`);
+    const familyData = await response.json();
+    const info = familyData.info;
+
+    // Create and append the paragraph with the fetched info
+    const famInfoParagraph = document.createElement('p');
+    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm');
+    famInfoParagraph.textContent = info;
+    famContainer.appendChild(famInfoParagraph);
+
+    // Hide the select element
+    famInput.classList.add('hidden');
+
+
     famSaveBtn.classList.add('hidden');
     famEditBtn.classList.remove('hidden');
 });
@@ -231,6 +227,7 @@ famEditBtn.addEventListener('click', () => {
         famContainer.removeChild(famInfoParagraph);
     }
 
+    famInput.classList.remove('hidden');
     famSaveBtn.classList.remove('hidden');
     famEditBtn.classList.add('hidden');
 });
@@ -243,12 +240,8 @@ const roleSaveBtn = document.getElementById('roleSaveBtn');
 const roleEditBtn = document.getElementById('roleEditBtn');
 
 async function roleDrop() {
-    try {
-        const response = await fetch('/api/characterRole/');
-        if (!response.ok) {
-            throw new Error('Failed to fetch Character role data');
-        }
-        const roleBackground = await response.json();
+    const response = await fetch('/api/characterRole/');
+    const roleBackground = await response.json();
 
         // Create the select element
         const select = document.createElement('select');
@@ -263,11 +256,44 @@ async function roleDrop() {
             select.appendChild(option);
         });
 
-        roleContainer.appendChild(select); 
-    } catch (error) {
-        console.error(error.message);
-    }
+        roleContainer.appendChild(select);
+  
 }
+
+roleSaveBtn.addEventListener('click', () => {
+    const roleInput = document.getElementById('roleInput');
+    const selectedOption = roleInput.options[roleInput.selectedIndex];
+    const roleId = selectedOption ? selectedOption.value : '';
+    const roleText = selectedOption ? selectedOption.textContent : '';
+
+    // Hide the select element
+    roleInput.classList.add('hidden');
+
+    // Display the selected option's text
+    const roleInfo = document.createElement('p');
+    roleInfo.id = 'roleInfo';
+    roleInfo.textContent = roleText;
+    roleContainer.appendChild(roleInfo);
+    roleInfo.classList.add('text-white','pl-1');
+
+    // Hide the save button and show the edit button
+    roleSaveBtn.classList.add('hidden');
+    roleEditBtn.classList.remove('hidden');
+});
+roleEditBtn.addEventListener('click', () => {
+    const roleInput = document.getElementById('roleInput');
+    const roleInfo = document.getElementById('roleInfo');
+
+    // Show the select element
+    roleInput.classList.remove('hidden');
+
+    // Remove the roleInfo element from the DOM
+    roleContainer.removeChild(roleInfo);
+  
+    // Show the save button and hide the edit button
+    roleSaveBtn.classList.remove('hidden');
+    roleEditBtn.classList.add('hidden');
+});
 
 // Call the function to populate the dropdown when the script loads
 roleDrop();

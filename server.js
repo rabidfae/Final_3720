@@ -491,7 +491,7 @@ app.get('/api/familyBackground', (req, res) => {
 });
 
 app.get('/api/familyBackground/:famId', (req, res) => {
-    const famId = parseInt(req.params.famId, 10); // Parse famId as an integer
+    const famId = parseInt(req.params.famId, 10); // Parse famId as an number
     const family = familyBackground.find(fam => fam.famId === famId);
 
     if (family) {

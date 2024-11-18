@@ -106,6 +106,7 @@ nameEditBtn.addEventListener('click', () => {
     nameField.classList.remove('hidden');
     nameSaveBtn.classList.remove('hidden');
     nameEditBtn.classList.add('hidden');
+    nameListItem.classList.add('hidden');
 
     // Set the input field value to the last list item's text
     nameField.value = nameListItem.textContent;
@@ -144,6 +145,7 @@ ageEditBtn.addEventListener('click', () => {
     ageField.classList.remove('hidden');
     ageSaveBtn.classList.remove('hidden');
     ageEditBtn.classList.add('hidden');
+    ageListItem.classList.add('hidden');
 
     // Set the input field value to the last list item's text
     if (ageListItem) {
@@ -192,7 +194,7 @@ famSaveBtn.addEventListener('click', async () => {
     famContainer.appendChild(famInfoHeader);
 
     const famInfoParagraph = document.createElement('p');
-    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm', 'pl-1', 'pt-1', 'bg-primary-light/20', 'p-1', 'rounded-3xl');
+    famInfoParagraph.classList.add('fam-info-paragraph','text-white', 'text-sm', 'pl-1', 'pt-1', 'bg-primary-light/20', 'p-1', 'rounded-3xl');
     famInfoParagraph.textContent = info;
     famContainer.appendChild(famInfoParagraph);
 
@@ -298,7 +300,7 @@ desireSaveBtn.addEventListener('click', () => {
     }
 
     const desireParagraph = document.createElement('p');
-    desireParagraph.classList.add('desire-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl');
+    desireParagraph.classList.add('desire-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
     desireParagraph.textContent = type;
     desireContainer.appendChild(desireParagraph);
     
@@ -339,7 +341,7 @@ relationSaveBtn.addEventListener('click', () => {
     }
 
     const relationParagraph = document.createElement('p');
-    relationParagraph.classList.add('relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl');
+    relationParagraph.classList.add('relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
     relationParagraph.textContent = type;
     relationContainer.appendChild(relationParagraph);
     

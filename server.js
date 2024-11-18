@@ -146,7 +146,7 @@ const imageData = [
     },   {
         imageId: '4.png',
         cardId: 4,
-        desire: "Take revenge on your rival for steal what you love",
+        desire: "Take revenge on your rival for stealing what you love",
         description: "Work with the player of your rival to establish what they took from you."
     },   {
         imageId: '5.png',

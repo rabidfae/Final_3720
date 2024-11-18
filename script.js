@@ -21,6 +21,9 @@ async function retrieveDesire() {
     desireImage.src = imageData.url;
     desireImage.alt = imageData.description;
 
+    const desireField = document.getElementById('desireField');
+    desireField.value = imageData.desire;
+
 }
 // Add an event listener to the button
 desireBtn.addEventListener("click", function () {
@@ -37,7 +40,10 @@ async function retrieveRelation() {
     const imageData2 = await response.json();
 
     relationshipImage.src = imageData2.url;
-    relationshipImage.alt = imageData2.description;
+    relationshipImage.alt = imageData2.public;
+
+    const relationField = document.getElementById('relationField');
+    relationField.value = imageData2.private;
 
 }
 // Add an event listener to the button
@@ -54,7 +60,7 @@ async function npcRelation() {
     const imageData3 = await response.json();
 
     npcImage.src = imageData3.url;
-    npcImage.alt = imageData3.description;
+    npcImage.alt = imageData3.sideA;
 
 }
 // Add an event listener to the button

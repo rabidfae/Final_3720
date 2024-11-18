@@ -187,12 +187,12 @@ famSaveBtn.addEventListener('click', async () => {
 
     // Create and append the paragraph with the fetched info
     const famInfoHeader = document.createElement('p');
-    famInfoHeader.classList.add('fam-info-header', 'text-white', 'pl-1');
+    famInfoHeader.classList.add('fam-info-header', 'text-white', 'pl-1', 'pt-1');
     famInfoHeader.textContent = type;
     famContainer.appendChild(famInfoHeader);
 
     const famInfoParagraph = document.createElement('p');
-    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm', 'pl-1');
+    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm', 'pl-1', 'pt-1');
     famInfoParagraph.textContent = info;
     famContainer.appendChild(famInfoParagraph);
 
@@ -281,3 +281,44 @@ roleEditBtn.addEventListener('click', () => {
 
 // Call the function to populate the dropdown when the script loads
 roleDrop();
+
+//Desire info
+const desireContainer = document.getElementById('desireContainer');
+const desireSaveBtn = document.getElementById('desireSaveBtn');
+const desireEditBtn = document.getElementById('desireEditBtn');
+const desireField = document.getElementById('desireField');
+const desireInfo = document.getElementById('desireInfo');
+
+desireSaveBtn.addEventListener('click', () => {
+    const type = desireField.value.trim(); // Get the value from the input field
+
+    if (!type) {
+        console.log('Desire field is empty');
+        return;
+    }
+
+    const desireParagraph = document.createElement('p');
+    desireParagraph.classList.add('desire-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl');
+    desireParagraph.textContent = type;
+    desireContainer.appendChild(desireParagraph);
+    
+    // Hide the input and save button, show the edit button
+    desireField.classList.add('hidden');
+    desireSaveBtn.classList.add('hidden');
+    desireEditBtn.classList.remove('hidden');
+    desireInfo.classList.add('hidden')
+});
+
+desireEditBtn.addEventListener('click', () => {
+    // Show the input and save button, hide the edit button
+    desireField.classList.remove('hidden');
+    desireSaveBtn.classList.remove('hidden');
+    desireEditBtn.classList.add('hidden');
+    desireInfo.classList.remove('hidden');
+
+    // Remove the paragraph with the entered info
+    const desireParagraph = document.querySelector('.desire-paragraph');
+    if (desireParagraph) {
+        desireContainer.removeChild(desireParagraph);
+    }
+});

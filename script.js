@@ -192,7 +192,7 @@ famSaveBtn.addEventListener('click', async () => {
     famContainer.appendChild(famInfoHeader);
 
     const famInfoParagraph = document.createElement('p');
-    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm', 'pl-1', 'pt-1');
+    famInfoParagraph.classList.add('fam-info-paragraph', 'text-white', 'text-sm', 'pl-1', 'pt-1', 'bg-primary-light/20', 'p-1', 'rounded-3xl');
     famInfoParagraph.textContent = info;
     famContainer.appendChild(famInfoParagraph);
 
@@ -257,7 +257,7 @@ roleSaveBtn.addEventListener('click', () => {
     roleInfo.id = 'roleInfo';
     roleInfo.textContent = roleText;
     roleContainer.appendChild(roleInfo);
-    roleInfo.classList.add('text-white', 'pl-1');
+    roleInfo.classList.add('text-white', 'pl-1', 'bg-primary-light/20', 'rounded-3xl',);
 
     // Hide the save button and show the edit button
     roleSaveBtn.classList.add('hidden');
@@ -320,5 +320,46 @@ desireEditBtn.addEventListener('click', () => {
     const desireParagraph = document.querySelector('.desire-paragraph');
     if (desireParagraph) {
         desireContainer.removeChild(desireParagraph);
+    }
+});
+
+//relationship info
+const relationContainer = document.getElementById('relationContainer');
+const relationSaveBtn = document.getElementById('relationSaveBtn');
+const relationEditBtn = document.getElementById('relationEditBtn');
+const relationField = document.getElementById('relationField');
+const relationInfo = document.getElementById('relationInfo');
+
+relationSaveBtn.addEventListener('click', () => {
+    const type = relationField.value.trim(); // Get the value from the input field
+
+    if (!type) {
+        console.log('Desire field is empty');
+        return;
+    }
+
+    const relationParagraph = document.createElement('p');
+    relationParagraph.classList.add('relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl');
+    relationParagraph.textContent = type;
+    relationContainer.appendChild(relationParagraph);
+    
+    // Hide the input and save button, show the edit button
+    relationField.classList.add('hidden');
+    relationSaveBtn.classList.add('hidden');
+    relationEditBtn.classList.remove('hidden');
+    relationInfo.classList.add('hidden')
+});
+
+relationEditBtn.addEventListener('click', () => {
+    // Show the input and save button, hide the edit button
+    relationField.classList.remove('hidden');
+    relationSaveBtn.classList.remove('hidden');
+    relationEditBtn.classList.add('hidden');
+    relationInfo.classList.remove('hidden');
+
+    // Remove the paragraph with the entered info
+    const relationParagraph = document.querySelector('.relation-paragraph');
+    if (relationParagraph) {
+        relationContainer.removeChild(relationParagraph);
     }
 });

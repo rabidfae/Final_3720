@@ -312,7 +312,7 @@ desireSaveBtn.addEventListener('click', () => {
     }
 
     const desireParagraph = document.createElement('p');
-    desireParagraph.classList.add('desire-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
+    desireParagraph.classList.add('desire-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2', 'text-sm');
     desireParagraph.textContent = type;
     desireContainer.appendChild(desireParagraph);
     
@@ -353,7 +353,7 @@ relationSaveBtn.addEventListener('click', () => {
     }
 
     const relationParagraph = document.createElement('p');
-    relationParagraph.classList.add('relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
+    relationParagraph.classList.add('relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2', 'text-sm');
     relationParagraph.textContent = type;
     relationContainer.appendChild(relationParagraph);
     

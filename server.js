@@ -333,8 +333,8 @@ const imageData3 = [
         imageId: '37.png',
         cardId: 37,
         name: "Evelyn",
-        sideA: "Evelyn: Succesful Physician. Homely, sincere, and professional. Holds the confidence and secrets of many of society's most influential.",
-        sideB: "Evelyn: Succesful Physician. Homely, polite, lacing in ambition. Only the fate of modern medicine can rouse him from his state of professional cordiality."
+        sideA: "Succesful Physician. Homely, sincere, and professional. Holds the confidence and secrets of many of society's most influential.",
+        sideB: "Succesful Physician. Homely, polite, lacing in ambition. Only the fate of modern medicine can rouse him from his state of professional cordiality."
 
     },
     {

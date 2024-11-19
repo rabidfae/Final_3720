@@ -398,7 +398,7 @@ const imageData3 = [
         imageId: '46.png',
         cardId: 46,
         name: "James",  
-        sideA: " Successfull Businessman. New money. Polite, reserved, and extremely private on personal matters. New to good society. Disguises his humble origins at all costs.",
+        sideA: "Successful Businessman. New money. Polite, reserved, and extremely private on personal matters. New to good society. Disguises his humble origins at all costs.",
         sideB: "Ruthless businessman. New money. Rich in funds but poor in titles. His cold amd mercenary personality is carefully hidden under a gentlemanly exterior."
     },
     {

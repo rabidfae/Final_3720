@@ -403,6 +403,9 @@ npcSaveBtn.addEventListener('click', () => {
         return;
     }
 
+    // Clear the container to prevent duplication
+    npcContainer.innerHTML = '';
+
     const npcParagraph = document.createElement('p');
     npcParagraph.classList.add('npc-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
     npcParagraph.textContent = type;
@@ -428,7 +431,7 @@ npcSaveBtn.addEventListener('click', () => {
     npcSideA.classList.add('hidden');
     npcSideB.classList.add('hidden');
     npcSaveBtn.classList.add('hidden');
-     npcEditBtn.classList.remove('hidden');
+    npcEditBtn.classList.remove('hidden');
     npcInfo.classList.add('hidden');
     npcSideAInfo.classList.add('hidden');
     npcSideBInfo.classList.add('hidden');

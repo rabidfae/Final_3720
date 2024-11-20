@@ -158,146 +158,39 @@
         <!--Connection sheet, right side of the screen-->
         <div class="bg-primary-dark rounded-3xl mt-4  border-2 border-white">
           <h1 class="text-center text-xl text-white p-2 m-1">Connections Sheet</h1>
-          <div class="grid grid-cols-3 grid-rows-2 rounded-b-3xl text-center p-2 bg-primary-light/30">
-            <div class="">
-              <p id="npcInfo" class="text-white">Connection Name</p>
-              <div id="npcContainer" class="rounded-3xl"></div>
-              <input type="text" id="npcField" name="npc" class="rounded-3xl p-1 m-1  bg-primary-light">
-              <p id="npcSideAInfo" class="text-white">Connection Front of Card</p>
-              <textarea type="text" id="npcSideA" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcSideBInfo" class="text-white">Connection Back of Card</p>
-              <textarea type="text" id="npcSideB" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcPersonal" class="text-white">Notes on Connection</p>
-              <textarea type="text" id="connectionRelation" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <div class="">
+          <div class=" rounded-b-3xl text-center p-2 bg-primary-light/30">
+            <div class="mb-5 flex flex-col gap-4">
+              <div class="flex flex-col items-center">
+                <p id="npcInfo" class="text-white">Connection Name</p>
+                <div id="npcContainer" class="flex flex-col gap-4 rounded-3xl"></div>
+                <input type="text" id="npcField" name="npc" class="rounded-3xl p-1 m-1 bg-primary-light">
+              </div>
+              <div class="flex flex-col items-center">
+                <p id="npcSideAInfo" class="text-white">Connection Front of Card</p>
+                <textarea type="text" id="npcSideA" name="npc"
+                  class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
+              </div>
+              <div class="flex flex-col items-center">
+                <p id="npcSideBInfo" class="text-white">Connection Back of Card</p>
+                <textarea type="text" id="npcSideB" name="npc"
+                  class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light mb-6"></textarea>
+              </div>
+              <!-- <div class="flex flex-col items-center">
+                <p id="npcPersonal" class="text-white">Notes on Connection</p>
+                <textarea type="text" id="connectionRelation" name="npc"
+                  class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
+              </div> -->
+
+              <!-- <div class="">
                 <button id="npcSaveBtn"
                   class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
                 <button id="npcEditBtn"
                   class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div>
+              </div> -->
             </div>
-            <!--connection 2-->
-            <div class="">
-              <p id="npcInfo2" class="text-white">Connection Name</p>
-              <div id="npcContainer2" class="rounded-3xl"></div>
-              <input type="text" id="npcField" name="npc" class=" rounded-3xl p-1 m-1  bg-primary-light">
-              <p id="npcSideAInfo2" class="text-white">Connection Front of Card</p>
-              <textarea type="text" id="npcSideA" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcSideBInfo2" class="text-white">Connection Back of Card</p>
-              <textarea type="text" id="npcSideB2" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcPersonal" class="text-white">Notes on Connection</p>
-              <textarea type="text" id="connectionRelation" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <div class="">
-                <button id="npcSaveBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                <button id="npcEditBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div>
-
-
-            </div>
-            <!--connection 3-->
-            <div class="">
-              <p id="npcInfo2" class="text-white">Connection Name</p>
-              <div id="npcContainer3" class="rounded-3xl"></div>
-              <input type="text" id="npcField" name="npc" class=" rounded-3xl p-1 m-1  bg-primary-light">
-              <p id="npcSideAInfo2" class="text-white">Connection Front of Card</p>
-              <textarea type="text" id="npcSideA" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcSideBInfo2" class="text-white">Connection Back of Card</p>
-              <textarea type="text" id="npcSideB2" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcPersonal" class="text-white">Notes on Connection</p>
-              <textarea type="text" id="connectionRelation" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <div class="">
-                <button id="npcSaveBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                <button id="npcEditBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div>
-
-
-            </div>
-            <!--connection 4-->
-            
-            <div class="mt-5">
-              <p id="npcInfo2" class="text-white">Connection Name</p>
-              <div id="npcContainer4" class="rounded-3xl"></div>
-              <input type="text" id="npcField" name="npc" class=" rounded-3xl p-1 m-1  bg-primary-light">
-              <p id="npcSideAInfo2" class="text-white">Connection Front of Card</p>
-              <textarea type="text" id="npcSideA" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcSideBInfo2" class="text-white">Connection Back of Card</p>
-              <textarea type="text" id="npcSideB2" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcPersonal" class="text-white">Notes on Connection</p>
-              <textarea type="text" id="connectionRelation" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <div class="">
-                <button id="npcSaveBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                <button id="npcEditBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div>
-
-
-            </div>
-            <!--connection 5-->
-            <div class="mt-5">
-              <p id="npcInfo2" class="text-white">Connection Name</p>
-              <div id="npcContainer5" class="rounded-3xl"></div>
-              <input type="text" id="npcField" name="npc" class=" rounded-3xl p-1 m-1  bg-primary-light">
-              <p id="npcSideAInfo2" class="text-white">Connection Front of Card</p>
-              <textarea type="text" id="npcSideA" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcSideBInfo2" class="text-white">Connection Back of Card</p>
-              <textarea type="text" id="npcSideB2" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcPersonal" class="text-white">Notes on Connection</p>
-              <textarea type="text" id="connectionRelation" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <div class="">
-                <button id="npcSaveBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                <button id="npcEditBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div>
-
-
-            </div>
-            <!--connection 6-->
-            <div class="mt-5">
-              <p id="npcInfo2" class="text-white">Connection Name</p>
-              <div id="npcContainer6" class="rounded-3xl"></div>
-              <input type="text" id="npcField" name="npc" class=" rounded-3xl p-1 m-1  bg-primary-light">
-              <p id="npcSideAInfo2" class="text-white">Connection Front of Card</p>
-              <textarea type="text" id="npcSideA" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcSideBInfo2" class="text-white">Connection Back of Card</p>
-              <textarea type="text" id="npcSideB2" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <p id="npcPersonal" class="text-white">Notes on Connection</p>
-              <textarea type="text" id="connectionRelation" name="npc"
-                class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              <div class="">
-                <button id="npcSaveBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                <button id="npcEditBtn2"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div>
-
-
-            </div>
-
           </div>
         </div>
+      </div>
   </main>
 </body>
 <footer class="bg-primary-dark/20 text-primary-dark text-center p-4">

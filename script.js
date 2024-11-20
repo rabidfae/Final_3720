@@ -51,7 +51,10 @@ relationshipBtn.addEventListener("click", function () {
     retrieveRelation();
 });
 
+
 // NPC card stuff here  
+const npcDataArray = [];
+
 async function npcRelation() {
     // Generate a random number between 37 and 56
     const randomNpcCard = Math.floor(Math.random() * 19) + 37;
@@ -59,19 +62,56 @@ async function npcRelation() {
     const response = await fetch(`/api/images/${imageName}`);
     const imageData3 = await response.json();
 
-    npcImage.src = imageData3.url;
-    npcImage.alt = imageData3.sideA;
+    // Store the NPC data in the array
+    npcDataArray.push(imageData3);
+
+    // Update the UI with the latest NPC data
+    updateNpcUI(imageData3);
+}
+
+// Function to update the UI with NPC data
+function updateNpcUI(npcData) {
+    npcImage.src = npcData.url;
+    npcImage.alt = npcData.sideA;
 
     const npcField = document.getElementById('npcField');
-    npcField.value = imageData3.name;
+    npcField.value = npcData.name;
     const npcSideA = document.getElementById('npcSideA');
-    npcSideA.value = imageData3.sideA;
+    npcSideA.value = npcData.sideA;
     const npcSideB = document.getElementById('npcSideB');
-    npcSideB.value = imageData3.sideB;
+    npcSideB.value = npcData.sideB;
+
+    const npcParagraph = document.createElement('p');
+    npcParagraph.classList.add('npc-paragraph', 'text-white', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2', 'flex-1');
+    npcParagraph.textContent = npcData.name;
+    npcContainer.appendChild(npcParagraph);
+
+    const npcParagraph2 = document.createElement('p');
+    npcParagraph2.classList.add('npc-paragraph', 'text-white', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2', 'flex-1');
+    npcParagraph2.textContent = npcData.sideA;
+    npcContainer.appendChild(npcParagraph2);
+
+    const npcParagraph3 = document.createElement('p');
+    npcParagraph3.classList.add('npc-paragraph', 'text-white', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2', 'flex-1');
+    npcParagraph3.textContent = npcData.sideB;
+    npcContainer.appendChild(npcParagraph3);
+
+    const npcParagraph4 = document.createElement('p');
+    npcParagraph4.classList.add('npc-relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
+    npcParagraph4.textContent = connectionRelation.value;
+    npcContainer.appendChild(npcParagraph4);
+
 }
+
 // Add an event listener to the button
 npcBtn.addEventListener("click", function () {
     npcRelation();
+    npcField.classList.add('hidden');
+    npcSideAInfo.classList.add('hidden');
+    npcSideBInfo.classList.add('hidden');
+    npcSideA.classList.add('hidden');
+    npcSideB.classList.add('hidden');
+    npcInfo.classList.add('hidden');
 });
 
 //Character Sheet things
@@ -393,48 +433,14 @@ const npcSideBInfo = document.getElementById('npcSideBInfo');
 const connectionRelation = document.getElementById('connectionRelation');
 
 npcSaveBtn.addEventListener('click', () => {
-    const type = npcField.value.trim(); 
-    const type2 = npcSideA.value.trim();
-    const type3 = npcSideB.value.trim();
-    const type4 = connectionRelation.value.trim();
-    
-    if (!type || !type2 || !type3 || !type4){
-        console.log('One or more fields are empty');
-        return;
-    }
-
-    // Clear the container to prevent duplication
-    npcContainer.innerHTML = '';
-
-    const npcParagraph = document.createElement('p');
-    npcParagraph.classList.add('npc-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
-    npcParagraph.textContent = type;
-    npcContainer.appendChild(npcParagraph);
-
-    const npcParagraph2 = document.createElement('p');
-    npcParagraph2.classList.add('npc-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
-    npcParagraph2.textContent = type2;
-    npcContainer.appendChild(npcParagraph2);
-
-    const npcParagraph3 = document.createElement('p');
-    npcParagraph3.classList.add('npc-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
-    npcParagraph3.textContent = type3;
-    npcContainer.appendChild(npcParagraph3);
-
     const npcParagraph4 = document.createElement('p');
     npcParagraph4.classList.add('npc-relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
-    npcParagraph4.textContent = type4;
+    npcParagraph4.textContent = connectionRelation.value;
     npcContainer.appendChild(npcParagraph4);
 
-    // Hide the input fields and save button, show the edit button
-    npcField.classList.add('hidden');
-    npcSideA.classList.add('hidden');
-    npcSideB.classList.add('hidden');
+
     npcSaveBtn.classList.add('hidden');
     npcEditBtn.classList.remove('hidden');
-    npcInfo.classList.add('hidden');
-    npcSideAInfo.classList.add('hidden');
-    npcSideBInfo.classList.add('hidden');
     npcPersonal.classList.add('hidden');
     connectionRelation.classList.add('hidden');
 });

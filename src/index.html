@@ -35,12 +35,12 @@
                 class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
             </div>
-           <div class="flex flex-col items-center border-2 bg-primary-light border-primary-dark rounded-3xl mt-6">
+           <div class="flex flex-col items-center border-2 bg-primary-light/75 border-primary-dark rounded-3xl mt-6">
           
                 <p id="npcPersonal" class="text-white mt-8 bg-primary-dark/55 p-3 rounded-3xl">Notes on Connections</p>
                 <div id="notesContainer"></div>
                 <textarea type="text" id="connectionRelation" name="npc"
-                  class="rounded-3xl p-5 m-4 pl-20 pr-20 h-96 bg-primary-dark/75 text-white"></textarea>
+                  class="rounded-3xl p-5 m-4 pl-20 pr-20 h-96 bg-primary-dark/50 text-white"></textarea>
               </div>
              <div class="">
                 <button id="npcSaveBtn"
@@ -55,7 +55,7 @@
       <!--Character sheet here. Right side of the screen.-->
       <!-- Name -->
       <div class="w-2/3 m-2 p-2">
-        <div class="bg-primary-dark/75 rounded-3xl border-2 border-primary-light">
+        <div class="bg-primary-dark/75 rounded-3xl border-2 border-primary-dark mt-10">
           <h1 class="text-center text-xl text-white p-3 mb-5 rounded-3xl">Character Sheet</h1>
           <div class="grid grid-cols-3 grid-rows-3 rounded-b-3xl  text-center p-2 bg-primary-light/30">
             <div class="p-3" id="nameInput" class="bg-primary-light/30">
@@ -169,7 +169,7 @@
 
         </div>
         <!--Connection sheet, right side of the screen-->
-        <div class="bg-primary-dark/75 rounded-3xl mt-4  border-2 border-primary-light">
+        <div class="bg-primary-dark/75 rounded-3xl mt-4  border-2 border-primary-dark">
           <h1 class="text-center text-xl text-white p-2 m-1">Connections Sheet</h1>
           <div class=" rounded-b-3xl text-center p-2 bg-primary-light/30">
             <div class="flex flex-col gap-4">
@@ -198,6 +198,6 @@
   </main>
 </body>
 <footer class="bg-primary-dark/20 text-primary-dark text-center p-4">
-  | Website &copy; 2024 Fox and Basil | Good Society &copy; StoryBrewers Roleplaying |
+  | Website &copy; 2024 Fox and Basil | Good Society &copy; Storybrewers Roleplaying |
   <script src="script.js"></script>
 </footer>

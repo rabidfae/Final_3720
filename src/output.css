@@ -649,6 +649,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -885,6 +889,10 @@ video {
 
 .bg-primary-dark\/15 {
   background-color: rgb(20 154 124 / 0.15);
+}
+
+.bg-primary-light\/80 {
+  background-color: rgb(161 229 195 / 0.8);
 }
 
 .p-1 {

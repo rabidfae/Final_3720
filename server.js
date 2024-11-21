@@ -434,7 +434,7 @@ const imageData3 = [
         cardId: 51,
         name: "Beatrice",
         sideA: "Orphan. Scathing wit. Smart and elegant. Her quiet smile hides her true opinion. Ward of a famed military officer. Her prospects are dependent on his generosity.",
-        sideB: "Newly out. Extensive dowry. Smart, resevered and well read. A sly wit for those privileged enough to hear it. Woe to the fortune hunter who thinks her an easy catch."
+        sideB: "Newly out. Extensive dowry. Smart, reserved and well read. A sly wit for those privileged enough to hear it. Woe to the fortune hunter who thinks her an easy catch."
     },
     {
         imageId: '52.png',

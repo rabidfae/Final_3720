@@ -82,17 +82,17 @@ function updateNpcUI(npcData) {
     npcSideB.value = npcData.sideB;
 
     const npcParagraph = document.createElement('p');
-    npcParagraph.classList.add('npc-paragraph', 'text-white', 'p-2', 'bg-primary-light/20', 'rounded-3xl','mt-5',  'flex-1');
+    npcParagraph.classList.add('npc-paragraph','justify-center', 'text-black', 'p-2', 'bg-primary-light/75', 'rounded-3xl','mt-5', 'flex-1', 'm-1');
     npcParagraph.textContent = npcData.name;
     npcContainer.appendChild(npcParagraph);
 
     const npcParagraph2 = document.createElement('p');
-    npcParagraph2.classList.add('npc-paragraph', 'text-white', 'p-2', 'bg-primary-light/20', 'rounded-3xl', 'flex-1');
+    npcParagraph2.classList.add('npc-paragraph', 'text-white', 'p-2', 'bg-primary-light/20', 'rounded-3xl', 'flex-1','m-1');
     npcParagraph2.textContent = npcData.sideA;
     npcContainer.appendChild(npcParagraph2);
 
     const npcParagraph3 = document.createElement('p');
-    npcParagraph3.classList.add('npc-paragraph', 'text-white', 'p-2', 'bg-primary-light/20', 'rounded-3xl', 'flex-1');
+    npcParagraph3.classList.add('npc-paragraph', 'text-white', 'p-2', 'bg-primary-light/20', 'rounded-3xl', 'flex-1','m-1');
     npcParagraph3.textContent = npcData.sideB;
     npcContainer.appendChild(npcParagraph3);
 
@@ -431,30 +431,32 @@ const npcInfo = document.getElementById('npcInfo');
 const npcSideAInfo = document.getElementById('npcSideAInfo');
 const npcSideBInfo = document.getElementById('npcSideBInfo');
 const connectionRelation = document.getElementById('connectionRelation');
+const notesContainer = document.getElementById('notesContainer');
 
-// npcSaveBtn.addEventListener('click', () => {
-//     const npcParagraph4 = document.createElement('p');
-//     npcParagraph4.classList.add('npc-relation-paragraph', 'text-white', 'pl-1', 'p-1', 'bg-primary-light/20', 'rounded-3xl', 'm-2');
-//     npcParagraph4.textContent = connectionRelation.value;
-//     npcContainer.appendChild(npcParagraph4);
+npcSaveBtn.addEventListener('click', () => {
+    notesContainer.innerHTML = '';
 
-
-//     npcSaveBtn.classList.add('hidden');
-//     npcEditBtn.classList.remove('hidden');
-//     npcPersonal.classList.add('hidden');
-//     connectionRelation.classList.add('hidden');
-// });
+    const notesParagraph = document.createElement('p');
+    notesParagraph.classList.add('.notes-save', 'text-white', 'p-3', 'bg-primary-dark/45', 'rounded-3xl', 'm-2','mt-5', 'pl-3');
+    notesParagraph.textContent = connectionRelation.value;
+    notesContainer.appendChild(notesParagraph);
 
 
-// npcEditBtn.addEventListener('click', () => {
-//     // Show the input and save button, hide the edit button
-//     npcSaveBtn.classList.remove('hidden');
-//     npcEditBtn.classList.add('hidden');  
-//     connectionRelation.classList.remove('hidden');
+    npcSaveBtn.classList.add('hidden');
+    npcEditBtn.classList.remove('hidden');
+    connectionRelation.classList.add('hidden');
+});
 
-//     // Remove the paragraph with the entered info
-//     const npcParagraphs = document.querySelectorAll('.npc-relation-paragraph');
-//     npcParagraphs.forEach(paragraph => {
-//         npcContainer.removeChild(paragraph);
-//     });
-// });
+
+npcEditBtn.addEventListener('click', () => {
+    // Show the input and save button, hide the edit button
+    npcSaveBtn.classList.remove('hidden');
+    npcEditBtn.classList.add('hidden');  
+    connectionRelation.classList.remove('hidden');
+
+    // Remove the paragraph with the entered info
+    const notesParagraphs = document.querySelectorAll('.notes-save');
+    notesParagraphs.forEach(paragraph => {
+        notesContainer.removeChild(paragraph);
+    });
+});

@@ -35,6 +35,19 @@
                 class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
             </div>
+           <div class="flex flex-col items-center border-2 bg-primary-dark/35 border-white rounded-3xl mt-6">
+          
+                <p id="npcPersonal" class="text-white mt-8 bg-primary-dark/55 p-3 rounded-3xl">Notes on Connections</p>
+                <div id="notesContainer"></div>
+                <textarea type="text" id="connectionRelation" name="npc"
+                  class="rounded-3xl p-5 m-4 pl-20 pr-20 h-96 bg-primary-dark/75 text-white"></textarea>
+              </div>
+             <div class="">
+                <button id="npcSaveBtn"
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
+                <button id="npcEditBtn"
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
+              </div>
           </div>
         </div>
       </div>
@@ -161,32 +174,23 @@
           <div class=" rounded-b-3xl text-center p-2 bg-primary-light/30">
             <div class="flex flex-col gap-4">
               <div class="flex flex-col items-center">
+              <div class="">
                 <p id="npcInfo" class="text-white">Connection Name</p>
-                <div id="npcContainer" class="flex flex-col gap-1 p-2 rounded-3xl"></div>
+                <div id="npcContainer" class= "p-2 rounded-3xl"></div>
                 <input type="text" id="npcField" name="npc" class="rounded-3xl p-1 m-1 bg-primary-light">
               </div>
-              <div class="flex flex-col items-center">
+              <div class="">
                 <p id="npcSideAInfo" class="text-white">Connection Front of Card</p>
                 <textarea type="text" id="npcSideA" name="npc"
                   class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
               </div>
-              <div class="flex flex-col items-center">
+              <div class="">
                 <p id="npcSideBInfo" class="text-white">Connection Back of Card</p>
                 <textarea type="text" id="npcSideB" name="npc"
                   class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light mb-6"></textarea>
               </div>
-              <!-- <div class="flex flex-col items-center">
-                <p id="npcPersonal" class="text-white">Notes on Connection</p>
-                <textarea type="text" id="connectionRelation" name="npc"
-                  class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
-              </div> -->
-
-              <!-- <div class="">
-                <button id="npcSaveBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
-                <button id="npcEditBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
-              </div> -->
+           
+              </div>
             </div>
           </div>
         </div>
@@ -194,6 +198,6 @@
   </main>
 </body>
 <footer class="bg-primary-dark/20 text-primary-dark text-center p-4">
-  | &copy; 2024 | Fox and Basil | Good Society Online |
+  | &copy; 2024 | Fox and Basil | 
   <script src="script.js"></script>
 </footer>

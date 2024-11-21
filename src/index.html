@@ -5,13 +5,13 @@
   <link href="output.css" rel="stylesheet" />
 </head>
 
-<body class="bg-primary-light">
+<body class="bg-white">
   <main>
 
     <div class="flex flex-row">
       <!--Card draws here. Left side of screen-->
       <div class="flex m-2 p-2 w-1/3">
-        <div class="bg-primary-light items-center justify-center">
+        <div class="bg-white items-center justify-center">
           <img class="h-48 rounded-3xl mx-auto" src="/images/logo.png"
             alt="Good Society written in dark green cursive" />
           <div class="p-2 flex flex-col justify-center items-center">
@@ -35,7 +35,7 @@
                 class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
             </div>
-           <div class="flex flex-col items-center border-2 bg-primary-dark/35 border-white rounded-3xl mt-6">
+           <div class="flex flex-col items-center border-2 bg-primary-light border-primary-dark rounded-3xl mt-6">
           
                 <p id="npcPersonal" class="text-white mt-8 bg-primary-dark/55 p-3 rounded-3xl">Notes on Connections</p>
                 <div id="notesContainer"></div>
@@ -55,7 +55,7 @@
       <!--Character sheet here. Right side of the screen.-->
       <!-- Name -->
       <div class="w-2/3 m-2 p-2">
-        <div class="bg-primary-dark rounded-3xl border-2 border-white">
+        <div class="bg-primary-dark rounded-3xl border-2 border-primary-light">
           <h1 class="text-center text-xl text-white p-3 mb-5 rounded-3xl">Character Sheet</h1>
           <div class="grid grid-cols-3 grid-rows-3 rounded-b-3xl  text-center p-2 bg-primary-light/30">
             <div class="p-3" id="nameInput" class="bg-primary-light/30">
@@ -65,9 +65,9 @@
                 autocomplete="off">
               <div class="m-1">
                 <button id="nameSaveBtn"
-                  class="border-2 rounded-2xl pl-2 pr-2  m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
                 <button id="nameEditBtn"
-                  class="border-2 rounded-2xl pl-2 pr-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
 
               </div>
             </div>
@@ -78,9 +78,9 @@
               <input type="number" id="ageField" name="age" class="rounded-3xl p-1 m-1 bg-primary-light">
               <div class="m-1">
                 <button id="ageSaveBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
                 <button id="ageEditBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
               </div>
             </div>
             <!-- Role -->
@@ -89,9 +89,9 @@
               <div id="roleContainer" class="rounded-3xl"></div>
               <div class="">
                 <button id="roleSaveBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1   bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
                 <button id="roleEditBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
               </div>
             </div>
             <!-- Family Background -->
@@ -100,9 +100,9 @@
               <div id="famContainer" class="rounded-3xl"></div>
               <div class="">
                 <button id="famSaveBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1   bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
                 <button id="famEditBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
               </div>
             </div>
             <!-- Desire -->
@@ -114,9 +114,9 @@
                 class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
               <div class="">
                 <button id="desireSaveBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1   bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
                 <button id="desireEditBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
               </div>
             </div>
             <!-- Relationship -->
@@ -128,9 +128,9 @@
                 class="resize-none rounded-3xl p-1 m-1 h-36 w-56 bg-primary-light"></textarea>
               <div class="">
                 <button id="relationSaveBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark">Save</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark">Save</button>
                 <button id="relationEditBtn"
-                  class="border-2 rounded-2xl pr-2 pl-2 m-1 bg-primary-light border-white text-primary-dark hover:bg-primary-accentdark hidden">Edit</button>
+                  class="border-2 rounded-full p-3 pl-5 pr-5 m-3 bg-primary-dark border-white text-white hover:bg-primary-light hover:text-primary-dark hidden">Edit</button>
               </div>
             </div>
             <!--Reputation-->
@@ -169,7 +169,7 @@
 
         </div>
         <!--Connection sheet, right side of the screen-->
-        <div class="bg-primary-dark rounded-3xl mt-4  border-2 border-white">
+        <div class="bg-primary-dark rounded-3xl mt-4  border-2 border-primary-light">
           <h1 class="text-center text-xl text-white p-2 m-1">Connections Sheet</h1>
           <div class=" rounded-b-3xl text-center p-2 bg-primary-light/30">
             <div class="flex flex-col gap-4">
@@ -198,6 +198,6 @@
   </main>
 </body>
 <footer class="bg-primary-dark/20 text-primary-dark text-center p-4">
-  | &copy; 2024 | Fox and Basil | 
+  | Website &copy; 2024 Fox and Basil | Good Society &copy; StoryBrewers Roleplaying |
   <script src="script.js"></script>
 </footer>

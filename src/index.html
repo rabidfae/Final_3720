@@ -17,30 +17,30 @@
           <div class="p-2 flex flex-col justify-center items-center">
             <div class="" id="desireCard">
               <img id="desireImage" src="/images/desire.png" alt="random desire card"
-                class="p-3 m-1 mx-auto rounded-3xl "></img>
+                class="m-4 mx-auto rounded-3xl border-2 border-primary-dark"></img>
               <button id="desireBtn"
                 class="bg-rose-300 hover:bg-rose-100 text-white hover:text-black  font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw Desire Card</button>
             </div>
             <div class="" id="relationshopCard">
               <img id="relationshipImage" src="/images/relationship.png" alt="random relationship card"
-                class="p-3 m-1 mx-auto rounded-3xl "></img>
+                class=" m-4 border-2 border-primary-dark mx-auto rounded-3xl "></img>
               <button id="relationshipBtn"
                 class="bg-indigo-300 hover:bg-indigo-100 text-white hover:text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw Relationship Card</button>
             </div>
             <div class="" id="npcCard">
-              <img id="npcImage" src="/images/npc.png" alt="random npc card" class="p-3 m-1 mx-auto rounded-3xl"></img>
+              <img id="npcImage" src="/images/npc.png" alt="random npc card" class="border-2 border-primary-dark m-4 mx-auto rounded-3xl"></img>
               <button id="npcBtn"
                 class="bg-primary-accent hover:bg-primary-accentdark text-black font-bold py-2 px-4 pt-2 rounded-full flex flex-col justify-center mx-auto">
                 Draw NPC Card</button>
             </div>
-           <div class="flex flex-col items-center border-2 bg-primary-light/75 border-primary-dark rounded-3xl mt-6">
+           <div class="flex flex-col items-center border-2 bg-primary-light/75 border-primary-dark rounded-3xl mt-6 p-5">
           
                 <p id="npcPersonal" class="text-white mt-8 bg-primary-dark/55 p-3 rounded-3xl">Notes on Connections</p>
                 <div id="notesContainer"></div>
                 <textarea type="text" id="connectionRelation" name="npc"
-                  class="rounded-3xl p-5 m-4 pl-20 pr-20 h-96 bg-primary-dark/50 text-white"></textarea>
+                  class="resize-none rounded-3xl p-5 m-4 pl-20 pr-20 h-96 bg-primary-dark/50 text-white"></textarea>
               </div>
              <div class="">
                 <button id="npcSaveBtn"
@@ -55,7 +55,7 @@
       <!--Character sheet here. Right side of the screen.-->
       <!-- Name -->
       <div class="w-2/3 m-2 p-2">
-        <div class="bg-primary-dark/75 rounded-3xl border-2 border-primary-dark mt-10">
+        <div class="bg-primary-dark/75 rounded-3xl border-2 border-primary-dark mt-10 mr-4">
           <h1 class="text-center text-xl text-white p-3 mb-5 rounded-3xl">Character Sheet</h1>
           <div class="grid grid-cols-3 grid-rows-3 rounded-b-3xl  text-center p-2 bg-primary-light/30">
             <div class="p-3" id="nameInput" class="bg-primary-light/30">
@@ -169,7 +169,7 @@
 
         </div>
         <!--Connection sheet, right side of the screen-->
-        <div class="bg-primary-dark/75 rounded-3xl mt-4  border-2 border-primary-dark">
+        <div class="bg-primary-dark/75 rounded-3xl mt-14 mr-4 border-2 border-primary-dark">
           <h1 class="text-center text-xl text-white p-2 m-1">Connections Sheet</h1>
           <div class=" rounded-b-3xl text-center p-2 bg-primary-light/30">
             <div class="flex flex-col gap-4">
@@ -197,7 +197,7 @@
       </div>
   </main>
 </body>
-<footer class="bg-primary-dark/20 text-primary-dark text-center p-4">
+<footer class="bg-primary-dark/35 text-primary-dark text-center p-4">
   | Website &copy; 2024 Fox and Basil | Good Society &copy; Storybrewers Roleplaying |
   <script src="script.js"></script>
 </footer>

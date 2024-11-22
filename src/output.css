@@ -653,6 +653,30 @@ video {
   margin-top: 2.5rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .flex {
   display: flex;
 }
@@ -807,6 +831,14 @@ video {
 .border-primary-light {
   --tw-border-opacity: 1;
   border-color: rgb(161 229 195 / var(--tw-border-opacity));
+}
+
+.border-primary-dark\/15 {
+  border-color: rgb(20 154 124 / 0.15);
+}
+
+.border-primary-dark\/30 {
+  border-color: rgb(20 154 124 / 0.3);
 }
 
 .bg-indigo-300 {
